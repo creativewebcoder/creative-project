@@ -1,0 +1,65 @@
+<img src="%i" height="1" width="1" border="0" />
+
+
+<script>
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://code.jquery.com/jquery-3.1.1.slim.min.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+
+<script>
+    var desktop_background = 'https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/brand_bg.png';
+
+    var Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL = "https://www.target.com/";
+
+    var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = desktop_background;
+    allBannerImages[1] = 'https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/cta.png';
+    allBannerImages[2] = 'https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/copy.png';
+    allBannerImages[3] = 'https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/girl.png';
+
+
+    var elChecker = setInterval(function () {
+        if (parent.$('.page-subnav').length > 0) {
+            clearInterval(elChecker);
+
+            parent.$('head').append('<style>#creativeBG #CopyC{position:absolute;bottom:38px;left:95px}#creativeBG #CTAC{position:absolute;right:358px;bottom:40px}#creativeBG #ProductC{position:absolute;right:-10px;top:0px}#creativeBG>div>img{}@-webkit-keyframes bounceInRight{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}from{opacity:0;-webkit-transform:translate3d(3000px,0,0);transform:translate3d(3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(-25px,0,0);transform:translate3d(-25px,0,0)}75%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}90%{-webkit-transform:translate3d(-5px,0,0);transform:translate3d(-5px,0,0)}to{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@keyframes bounceInRight{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}from{opacity:0;-webkit-transform:translate3d(3000px,0,0);transform:translate3d(3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(-25px,0,0);transform:translate3d(-25px,0,0)}75%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}90%{-webkit-transform:translate3d(-5px,0,0);transform:translate3d(-5px,0,0)}to{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@-webkit-keyframes bounceInDown{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,-3000px,0);transform:translate3d(0,-3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}75%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}to{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@keyframes bounceInDown{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.61,0.355,1);animation-timing-function:cubic-bezier(0.215,0.61,0.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,-3000px,0);transform:translate3d(0,-3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}75%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}to{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.bounceInDown{-webkit-animation-name:bounceInDown;animation-name:bounceInDown}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}.bounceInRight{-webkit-animation-name:bounceInRight;animation-name:bounceInRight}.animated{-webkit-animation-delay:0s;animation-delay:0s;-webkit-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated2{-webkit-animation-delay:1s;animation-delay:1s;-webkit-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated3{-webkit-animation-delay:2.5s;animation-delay:2.5s;-webkit-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}#primoFC .three-day-forecast{height:315px} .three-day-panel .panel {min-height: 316px;}#primoFC div.three-day-forecast{top: 0px;position: relative;z-index: 1;width: 632px;}#primoFC{width:960px;height:440px;margin: 0 auto 15px auto;position:relative}#primoFC #creativeBG{overflow: hidden;z-index: 0;position:absolute;width:960px;height:440px;top:0px;left:0;background:url(' + desktop_background + ')}#primoFC #creativeBG:hover{cursor:pointer}#feed-tabs.panel-list.flipper-panel{background:none;border:none;border-radius:0;width:604px;z-index:10}#trending-now{margin-top:25px}</style>');
+
+            allBannerImages.forEach(function (imgSrc) {
+                parent.$('<img/>').attr('src', imgSrc).on('load', function () {
+                    parent.$(this).remove();
+                    uploadImagesCount++;
+
+                    if (allBannerImages.length == uploadImagesCount) {
+                        parent.$('.page-subnav').after('<div id=primoFC></div>');
+                        parent.$('.three-day-forecast').detach().appendTo('#primoFC');
+                        parent.$('#primoFC').append('<div id="creativeBG"><div id="CopyC" class="animated2 bounceInDown"> <img src="https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/copy.png" alt=""></div><div id="CTAC" class="animated3 fadeIn"> <img src="https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/cta.png" alt="CTA"></div><div id="ProductC" class="animated bounceInRight"> <img src="https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v2/girl.png" alt=""></div></div>');
+                        parent.$('#creativeBG').click(function () {
+                            window.open(Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL, '_blank');
+                        });
+                    }
+                });
+            });
+
+            //display logic "hack" for different weather conditions
+            var hasMC = false;
+            var hasLFS = false;
+            if (parent.$('.fc-status.mc').length > 0) {
+                hasMC = true;
+            }
+            if (parent.$('.fc-status.lfs').length > 0) {
+                hasLFS = true;
+            }
+            if (hasMC && hasLFS) {
+                parent.$('.fc-status.mc').css('margin', '25px 0px 10px 0px');
+            } else if (hasMC) {
+                parent.$('.fc-status.mc').css('margin-top', '25px');
+            } else if (hasLFS) {
+                parent.$('.fc-status.lfs').css('margin-top', '25px');
+            }
+            //
+        }
+    }, 100);
+</script>
+https://ad.doubleclick.net/ddm/trackimp/N224801.2036702ACCUWEATHER.COM/B23001307.251115119;dc_trk_aid=447743260;dc_trk_cid=118961978;ord=%%CACHEBUSTER%%;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?
