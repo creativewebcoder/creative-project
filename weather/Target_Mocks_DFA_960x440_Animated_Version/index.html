@@ -1,0 +1,153 @@
+<html>
+<head>
+    <style>
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes bounce {
+
+            from,
+            20%,
+            53%,
+            80%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            40%,
+            43% {
+                -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                -webkit-transform: translate3d(0, -30px, 0);
+                transform: translate3d(0, -30px, 0);
+            }
+
+            70% {
+                -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                -webkit-transform: translate3d(0, -15px, 0);
+                transform: translate3d(0, -15px, 0);
+            }
+
+            90% {
+                -webkit-transform: translate3d(0, -4px, 0);
+                transform: translate3d(0, -4px, 0);
+            }
+        }
+
+
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        #animatedBanner {
+            background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/brand_bg.png');
+            background-repeat: no-repeat;
+            width: 960px;
+            height: 440px;
+        }
+
+        /* #mainContainer {
+                background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/desktop_forecast_anchor.png');
+                background-repeat: no-repeat;                
+                width: 700px;
+                height: 440px;
+                opacity: .5;
+            } */
+        /* #bannerBrandLogo {
+                background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/brand_logo.png'); 
+                width: 44px;
+                height: 44px;
+                position: absolute;
+                bottom: 53px;
+                left: 38px;
+                opacity: 0;
+            } */
+        #bannerBrandCopy {
+            background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/copy.png');
+            width: 195px;
+            height: 41px;
+            position: absolute;
+            top: 366px;
+            left: 100px;
+            animation-delay: 2s;
+            -webkit-animation-name: bounce;
+            animation-name: bounce;
+            -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+        }
+
+        #bannerBrandCta {
+            background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/cta.png');
+            width: 137px;
+            height: 34px;
+            position: absolute;
+            top: 367px;
+            left: 469px;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        #bannerBrandGirl {
+            background-image: url('https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/girl.png');
+            width: 338px;
+            height: 440px;
+            position: absolute;
+            top: 8px;
+            left: 630px;
+            opacity: .3;
+            display: none;
+
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+            -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animatedBanner">
+        <div id="mainContainer">
+            <div id="bannerBrandCopy" class="animated"></div>
+            <div id="bannerBrandCta" class="animated "></div>
+            <div id="bannerBrandGirl" class="animated  "></div>
+        </div>
+    </div>
+</body>
+
+</html>

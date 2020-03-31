@@ -1,0 +1,49 @@
+<img src="%i" height="1" width="1" border="0" />
+    
+       
+<script>
+var script = document.createElement('script');  
+script.type = 'text/javascript';
+script.src = 'https://code.jquery.com/jquery-3.1.1.slim.min.js';    
+parent.document.getElementsByTagName('head')[0].appendChild(script);      
+</script>
+
+<script>
+   var desktop_background = 'https://creative.sebpo.com/accuweather/2020/Mack_Weldon/Desktop_FA_v2/Mack_Weldon_Custom_Creatives_960x440_DFA_Grey_Jacket.png';
+
+    var Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL= "https://www.accuweather.com/";
+
+
+    var elChecker = setInterval(function() {
+        if (parent.$('.page-subnav').length > 0) {
+            clearInterval(elChecker);
+
+            parent.$('head').append('<style>#primoFC .three-day-forecast{height:315px} .three-day-panel .panel {min-height: 316px;}#primoFC div.three-day-forecast{top: 0px;position: relative;z-index: 1;width: 632px;}#primoFC{width:960px;height:440px;margin: 0 auto 15px auto;position:relative}#primoFC #creativeBG{z-index: 0;position:absolute;width:960px;height:440px;top:0px;left:0;background:url(' + desktop_background + ')}#primoFC #creativeBG:hover{cursor:pointer}#feed-tabs.panel-list.flipper-panel{background:none;border:none;border-radius:0;width:604px;z-index:10}#trending-now{margin-top:25px}</style>');
+            parent.$('.page-subnav').after('<div id=primoFC></div>');
+            parent.$('.three-day-forecast').detach().appendTo('#primoFC');
+            parent.$('#primoFC').append('<div id="creativeBG"></div>');
+            parent.$('#creativeBG').click(function() {
+                window.open(Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL, '_blank');
+            });
+
+            //display logic "hack" for different weather conditions
+            var hasMC = false;
+            var hasLFS = false;
+            if (parent.$('.fc-status.mc').length > 0) {
+                hasMC = true;
+            }
+            if (parent.$('.fc-status.lfs').length > 0) {
+                hasLFS = true;
+            }
+            if (hasMC && hasLFS) {
+                parent.$('.fc-status.mc').css('margin', '25px 0px 10px 0px');
+            } else if (hasMC) {
+                parent.$('.fc-status.mc').css('margin-top', '25px');
+            } else if (hasLFS) {
+                parent.$('.fc-status.lfs').css('margin-top', '25px');
+            }
+            //
+        }
+    }, 100);
+</script>
+https://ad.doubleclick.net/ddm/trackimp/N224801.2036702ACCUWEATHER.COM/B23001307.251115119;dc_trk_aid=447743260;dc_trk_cid=118961978;ord=%%CACHEBUSTER%%;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?
