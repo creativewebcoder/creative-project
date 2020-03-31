@@ -9,23 +9,26 @@
 </script>
 
 <script>
-    var desktop_background = 'https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/brand_bg.png';
+    var desktop_background = 'https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v3/brand_bg.png';
     var Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL = "https://www.accuweather.com/";
 
     var elChecker = setInterval(function () {
-        parent.$('<img/>').attr('src', desktop_background).on('load', function () {
-            parent.$(this).remove();
-        });
+       
 
         if (parent.$('.page-subnav').length > 0) {
             clearInterval(elChecker);
 
-            parent.$('head').append("<style>#primoFC .three-day-forecast{height:315px} .three-day-panel .panel {min-height: 316px;}#primoFC div.three-day-forecast{top: 0px;position: relative;z-index: 1;width: 632px;}#primoFC{width:960px;height:440px;margin: 0 auto 15px auto;position:relative}#primoFC #creativeBG{overflow:hidden;z-index: 0;position:absolute;width:960px;height:440px;top:0px;left:0;background:url(" + desktop_background + ")}#primoFC #creativeBG:hover{cursor:pointer}#feed-tabs.panel-list.flipper-panel{background:none;border:none;border-radius:0;width:604px;z-index:10}#trending-now{margin-top:25px}@keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}#mainContainer{width:960px;height:440px;overflow:hidden}#bannerBrandCopy{background-image:url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/copy.png);width:309px;height:76px;position:absolute;top:352px;left:639px;-webkit-animation-delay:1s;animation-delay:1s;-webkit-animation-name:fadeInRight;animation-name:fadeInRight;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}#bannerBrandCta{background-image:url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/cta.png);width:167px;height:50px;position:absolute;top:378px;left:427px;-webkit-animation-delay:2s;animation-delay:2s;-webkit-animation-name:fadeIn;animation-name:fadeIn;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}</style>");
+            parent.$('head').append("<style>#primoFC .three-day-forecast{height:315px} .three-day-panel .panel {min-height: 316px;}#primoFC div.three-day-forecast{top: 0px;position: relative;z-index: 1;width: 632px;}#primoFC{width:960px;height:440px;margin: 0 auto 15px auto;position:relative}#primoFC #creativeBG{overflow:hidden;z-index: 0;position:absolute;width:960px;height:440px;top:0px;left:0;background:url(" + desktop_background + ")}#primoFC #creativeBG:hover{cursor:pointer}#feed-tabs.panel-list.flipper-panel{background:none;border:none;border-radius:0;width:604px;z-index:10}#trending-now{margin-top:25px}@keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}#mainContainer{width:960px;height:440px;overflow:hidden}#bannerBrandCopy{background-image:url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v3/copy.png);width:309px;height:76px;position:absolute;top:352px;left:639px;-webkit-animation-delay:1s;animation-delay:1s;-webkit-animation-name:fadeInRight;animation-name:fadeInRight;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}#bannerBrandCta{background-image:url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v3/cta.png);width:167px;height:50px;position:absolute;top:378px;left:427px;-webkit-animation-delay:2s;animation-delay:2s;-webkit-animation-name:fadeIn;animation-name:fadeIn;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}</style>");
             parent.$('.page-subnav').after('<div id=primoFC></div>');
             parent.$('.three-day-forecast').detach().appendTo('#primoFC');
-            parent.$('#primoFC').append('<div id="creativeBG"><div id="bannerBrandCopy"></div><div id="bannerBrandCta"></div></div>');
-            parent.$('#creativeBG').click(function () {
-                window.open(Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL, '_blank');
+            parent.$('<img/>').attr('src', desktop_background).on('load', function () {
+                parent.$(this).remove();
+            
+                parent.$('#primoFC').append('<div id="creativeBG"><div id="bannerBrandCopy"></div><div id="bannerBrandCta"></div></div>');
+                parent.$('#creativeBG').click(function () {
+                    window.open(Duracell_Power_Forward_Desktop_BGI_960x440_THD_Glacier_Click_URL, '_blank');
+                });
+
             });
 
             //display logic "hack" for different weather conditions
