@@ -1,0 +1,6 @@
+Images : https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/brand_bg.png
+
+
+lineItem: https://admanager.google.com/6581#delivery/PreviewCreative/orderId=2350052098&lineItemId=5066586622&creativeId=138308037643
+
+Preview: https://www.accuweather.com/en/us/new-york/10001/weather-forecast/349727

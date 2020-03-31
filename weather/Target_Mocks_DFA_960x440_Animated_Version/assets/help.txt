@@ -1,8 +1,0 @@
-Name: Target_Mocks_DFA_960x440_Animated_Version
-
-
-LineItem: https://admanager.google.com/6581#delivery/PreviewCreative/orderId=2350052098&lineItemId=5066586622&creativeId=138307625982
-
-Preview: https://www.accuweather.com/en/us/new-york/10001/weather-forecast/349727
-
-ImageLink: https://creative.sebpo.com/accuweather/2020/Target_Mock/desktop_FA/v1/
