@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
     <style>
+        
         @keyframes fadeInRight {
             0% {
                 opacity: 0;
@@ -27,6 +28,7 @@
                 transform: translate3d(0, 0, 0);
             }
         }
+        
 
 
         @keyframes fadeIn {
@@ -45,6 +47,104 @@
             width: 960px;
             height: 440px;
             overflow: hidden;
+        }
+
+        @keyframes rightLeft {
+            0% {
+                opacity: 1;
+                -webkit-transform: translate3d(0px, 0, 0) rotate(0deg);
+                transform: translate3d(0px, 0, 0) rotate(0deg);                
+            }
+            50% {
+                opacity: 1;
+                -webkit-transform: translate3d(300px, 0, 0);
+                transform: translate3d(300px, 0, 0) rotate(45deg);                
+            } 
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translate3d(0px, 0, 0);
+                transform: translate3d(0px, 0, 0) rotate(45deg);                
+            }           
+        }
+        @keyframes leftRight {
+            0% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(300px, 0, 0);     
+            }
+            25% {
+                opacity: 0;
+                -webkit-transform: translate3d(150px, 0, 0);
+                transform: translate3d(150px, 0, 0)  ;     
+                
+            } 
+            50% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);     
+            } 
+            75% {
+                opacity: 0;
+                -webkit-transform: translate3d(150px, 0, 0);
+                transform: translate3d(150px, 0, 0);     
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translate3d(300px, 0, 0);
+                transform: translate3d(300px, 0, 0);     
+            }    
+        }
+        
+
+        #bannerSunLight {
+            background-image: url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/brand_bg.png);
+            background-repeat: no-repeat;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            background-position: 100% 0px;
+            z-index: 0;
+            border: red;
+            position: absolute;
+            left: 624px;
+            top: 0px;
+            border-radius: 50%;
+            background-color: red;
+
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+            -webkit-animation-name: rightLeft;
+            animation-name: rightLeft;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+
+        #bannerDarkLight {
+            background-image: url(https://creative.sebpo.com/accuweather/2020/Taco_Bell/desktop_FA/v2/brand_bg.png);
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 200px;
+            overflow: hidden;
+            background-position: 70% 0px;
+            z-index: 0;
+            position: absolute;
+            left: 624px;
+            top: 0px;
+            background-color: #000;
+
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+            -webkit-animation-name: leftRight;
+            animation-name: leftRight;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
         }
        
         #bannerBrandCopy {
@@ -87,8 +187,11 @@
 
 <body>
     <div id="mainContainer">
+        
         <div id="bannerBrandCopy"></div>
         <div id="bannerBrandCta" ></div>
+        <div id="bannerSunLight"></div>
+        <div id="bannerDarkLight"></div>
     </div>
 </body>
 
