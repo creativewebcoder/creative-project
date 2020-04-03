@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top,
+        #bottom {
+            width: 970px;
+            margin: 0px auto
+        }
+
+        .headI {
+            height: 250px;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 120px;
+            z-index: 9999;
+        }
+
+        .template-root .page-subnav {
+            background: #ebebeb;
+            padding: 0px 10px 16px !important;
+            margin-bottom: 0px !important
+        }
+
+        .lol {
+            position: relative;
+            width: 100%;
+            margin: 0px auto;
+            height: 100vh;
+            background: transparent;
+            margin-top: 367px;
+            z-index: 1;
+            cursor: pointer
+        }
+
+        .innerL {
+            width: 960px;
+            margin: 0px auto;
+            height: 100vh;
+            background: #ebebeb
+        }
+
+        .base-footer.is-en {
+            position: relative
+        }
+
+        .breadcrumbs-wrapper {
+            padding-left: 0;
+            position: relative
+        }
+
+        .content-module {
+            position: relative
+        }
+
+        .DDD {
+            z-index: 0;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: url(https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/Bonzai_Unit_VSC_Oysters_Skin.png) no-repeat center 67px;
+            background-attachment: scroll
+        }
+
+        .CLICDIV2 {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 250px;
+            top: 46px
+        }
+
+        .CLICDIV2 .topC {
+            cursor: pointer;
+            width: 100%;
+            left: 0px;
+            position: absolute;
+            height: 250px;
+            top: 0px
+        }
+
+        .template-root .page-subnav {
+            position: relative;
+            background: #ebebeb;
+            padding: 0px 10px
+        }
+
+        .page-subheader {
+            margin-bottom: 250px !important
+        }
+
+        .two-column-page-content {
+            background: #ebebeb;
+            position: relative
+        }
+
+        .CLICDIV {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 100vh
+        }
+
+        .CLICDIV .leftC {
+            cursor: pointer;
+            width: calc((100% - 960px)/2);
+            left: 0px;
+            position: fixed;
+            height: 100vh
+        }
+
+        .CLICDIV .rightC {
+            cursor: pointer;
+            width: calc((100% - 960px)/2);
+            right: 0px;
+            position: fixed;
+            height: 100vh
+        }
+
+        .leaf {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0
+        }
+
+        #clouds {
+            padding: 100px 0;
+            height: 100vh;
+            background: url(https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/Bonzai_Unit_VSC_Oysters_Content.png) center 67px;
+        }
+
+        .cloud {
+            position: absolute;
+            height: auto;
+            width: auto;
+            text-align: center;
+        }
+
+        .cloud img {
+            /* width: 76%; */
+        }
+
+
+        .x1 {
+            /*-webkit-animation: movecloud1 0s 40s linear infinite;*/
+            animation: movecloud1 40s 0s linear infinite;
+            top: 25%;
+            transform: scale(.6);
+            opacity: 0;
+        }
+
+        .x2 {
+            /*-webkit-animation: movecloud1 2s 50s linear infinite;*/
+            animation: movecloud1 50s 2s linear infinite;
+            /* left: 3%; */
+            top: 30%;
+             transform: scale(.6);
+            opacity: 0;
+        }
+
+        .x3 {
+            /*-webkit-animation: movecloud1 4s 20s linear infinite;*/
+            animation: movecloud1 32s 4s linear infinite;
+            /* left: 20%; */
+            top: 2%;
+             transform: scale(.6);
+            opacity: 0;
+        }
+
+        .x4 {
+            /*-webkit-animation: movecloud1 6s 25s linear infinite;*/
+            animation: movecloud1 25s 6s linear infinite;
+            top: 10%;
+             transform: scale(.6);
+            opacity: 0;
+        }
+
+        .x5 {
+            /*-webkit-animation: movecloud1 8s 35s linear infinite;*/
+            animation: movecloud1 35s 8s linear infinite;
+            /* left: 66%; */
+            top: 16%;
+             transform: scale(.6);
+            opacity: 0;
+        }
+
+        .x6 {
+            /* -webkit-animation: movecloud1 50s linear infinite;
+            animation: movecloud1 50s linear infinite; */
+            right: -10%;
+            top: -10%;
+        }
+
+
+
+
+
+        @-webkit-keyframes movecloud1 {
+            0% {
+                right: -30%; opacity: 1;
+            }
+
+            100% {
+                right: 130%;opacity: 1;
+            }
+        }
+
+        @keyframes movecloud1 {
+            0% {
+                right: -30%;opacity: 1;
+            }
+
+            100% {
+                right: 130%;opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="DDD">
+        <a href='https://www.google.com/' target='_blank'>
+            <div class='headI'></div>
+            <div class='lol'>
+                <div class='innerL'></div>
+            </div>
+        </a>
+        <div id='clouds' class='leaf'>
+            <div class='cloud x1'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img1.png"
+                    alt="Clouds">
+            </div>
+            <div class='cloud x2'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img2.png"
+                    alt="Clouds">
+            </div>
+            <div class='cloud x3'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img3.png"
+                    alt="Clouds">
+            </div>
+            <div class='cloud x4'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img4.png"
+                    alt="Clouds">
+            </div>
+            <div class='cloud x5'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img5.png"
+                    alt="Clouds">
+            </div>
+            <div class='cloud x6'>
+                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/sun.png" alt="Clouds">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
