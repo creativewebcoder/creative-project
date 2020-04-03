@@ -37,18 +37,11 @@
                 opacity: 1;
             }
         }
-        @keyframes fadeInOut2 {
-            0% {opacity: 0;}
-            10% {opacity: 0;}
-            20% {opacity: 0.2;} 
-            30% {opacity: 0.5;} 
-            40% {opacity: 0.80;}
+        
+
+        @keyframes fadeInOut {
+            0% {opacity: 0;}           
             50% {opacity: 1;}
-            60% {opacity: 0.85;}
-            70% {opacity: 0.6;}
-            80% {opacity: 0.5;}
-            90% {opacity: 0.4;}
-            100% {opacity: 0;}
         }
        
         @keyframes rightLeft {
@@ -64,6 +57,17 @@
               
             }           
         }
+
+        @keyframes scaleInOut {
+            0% {
+                transform: scale(1.0);
+            }
+            50% {
+                transform: scale(2.0);              
+            }           
+        }
+
+        
 
         #mainContainer {            
             width: 960px;
@@ -120,9 +124,19 @@
             overflow: hidden;
             z-index: 2;
             position: absolute;
-            left: 925px;
+            left: 875px;
             top: -95px;
 
+            -webkit-animation-name: scaleInOut;
+            animation-name: scaleInOut;
+            -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+
+
+            /*
             -webkit-animation-delay: 0s;
             animation-delay: 0s;
             -webkit-animation-name: rightLeft;
@@ -132,6 +146,7 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
             animation-iteration-count: infinite;
+            */
         }
 
         #bannerDarkLight2 {
@@ -146,14 +161,14 @@
             top: 0;
             -webkit-animation-delay: 0s;
             animation-delay: 0s;
-            -webkit-animation-name: fadeInOut2;
-            animation-name: fadeInOut2;            
-            -webkit-animation-duration: 20s;
-            animation-duration: 20s;
+            -webkit-animation-name: fadeInOut;
+            animation-name: fadeInOut;            
+            -webkit-animation-duration: 15s;
+            animation-duration: 15s;
             -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
-            background-color: black;
+            background-color: #ffb059;
         }
 
         #bannerDarkLight1 {
@@ -202,7 +217,6 @@
             position: absolute;
             top: 378px;
             left: 427px;
-
             -webkit-animation-delay: 2s;
             animation-delay: 2s;
             -webkit-animation-name: fadeIn;
