@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
     <style>
         #top,
@@ -125,7 +125,7 @@
             height: 100vh
         }
 
-        .leaf {
+        .clouds {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -146,60 +146,59 @@
             text-align: center;
         }
 
-        .cloud img {
-            /* width: 76%; */
-        }
-
-
-        .x1 {
-            /*-webkit-animation: movecloud1 0s 40s linear infinite;*/
-            animation: movecloud1 40s 0s linear infinite;
-            top: 25%;
+        .clouds img {
             transform: scale(.6);
+            opacity: 0.8;
+        }
+        .clouds .sun img {
+            transform: scale(1);
+            opacity: 0.9;
+        }
+        .cloud1, .cloud2, .cloud3, .cloud4 ,.cloud5{
             opacity: 0;
         }
 
-        .x2 {
-            /*-webkit-animation: movecloud1 2s 50s linear infinite;*/
-            animation: movecloud1 50s 2s linear infinite;
+
+        .cloud1 {
+            -webkit-animation: movecloud1 80s 5s ease-in infinite;
+            animation: movecloud1 80s  5s ease-in infinite;
+            top: 25%;
+        }
+
+        .cloud2 {
+            -webkit-animation: movecloud1 70s 0s linear infinite;
+            animation: movecloud1 70s 0s linear infinite;
             /* left: 3%; */
-            top: 30%;
-             transform: scale(.6);
-            opacity: 0;
+            top: 32%;
         }
 
-        .x3 {
-            /*-webkit-animation: movecloud1 4s 20s linear infinite;*/
-            animation: movecloud1 32s 4s linear infinite;
+        .cloud3 {
+            -webkit-animation: movecloud1 97s 0s ease-in-out infinite;
+            animation: movecloud1 97s 0s ease-in-out infinite;
             /* left: 20%; */
             top: 2%;
-             transform: scale(.6);
-            opacity: 0;
         }
 
-        .x4 {
-            /*-webkit-animation: movecloud1 6s 25s linear infinite;*/
-            animation: movecloud1 25s 6s linear infinite;
+        .cloud4 {
+            -webkit-animation: movecloud1 125s 0s linear infinite;
+            animation: movecloud1 125s 0s linear infinite;
             top: 10%;
-             transform: scale(.6);
-            opacity: 0;
         }
 
-        .x5 {
-            /*-webkit-animation: movecloud1 8s 35s linear infinite;*/
-            animation: movecloud1 35s 8s linear infinite;
+        .cloud5 {
+            -webkit-animation: movecloud1 130s 25.0s ease-out infinite;
+            animation: movecloud1 130s 25.0s ease-out infinite;
             /* left: 66%; */
             top: 16%;
-             transform: scale(.6);
-            opacity: 0;
         }
 
-        .x6 {
-            /* -webkit-animation: movecloud1 50s linear infinite;
-            animation: movecloud1 50s linear infinite; */
-            right: -10%;
-            top: -10%;
+        .sun {
+            -webkit-animation: rotation 120s  0s infinite linear;
+            animation: rotation 120s  0s infinite linear;
+            right: -16%;
+            top: -20%;
         }
+
 
 
 
@@ -211,53 +210,76 @@
             }
 
             100% {
-                right: 130%;opacity: 1;
+                right: 110%; opacity: 1;
             }
         }
 
         @keyframes movecloud1 {
             0% {
-                right: -30%;opacity: 1;
+                right: -20%; opacity: 1;
             }
 
             100% {
-                right: 130%;opacity: 1;
+                right: 110%; opacity: 1;
+            }
+        }
+
+
+       
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+
+        @keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(359deg);
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="DDD">
+    <div class='DDD'>
         <a href='https://www.google.com/' target='_blank'>
             <div class='headI'></div>
             <div class='lol'>
                 <div class='innerL'></div>
             </div>
         </a>
-        <div id='clouds' class='leaf'>
-            <div class='cloud x1'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img1.png"
-                    alt="Clouds">
+        <div id='clouds' class='clouds'>
+            <div class='cloud cloud1'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img1.png'
+                    alt='Clouds'>
             </div>
-            <div class='cloud x2'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img2.png"
-                    alt="Clouds">
+            <div class='cloud cloud2'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img2.png'
+                    alt='Clouds'>
             </div>
-            <div class='cloud x3'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img3.png"
-                    alt="Clouds">
+            <div class='cloud cloud3'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img3.png'
+                    alt='Clouds'>
             </div>
-            <div class='cloud x4'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img4.png"
-                    alt="Clouds">
+            <div class='cloud cloud4'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img4.png'
+                    alt='Clouds'>
             </div>
-            <div class='cloud x5'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img5.png"
-                    alt="Clouds">
+            <div class='cloud cloud5'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/cloud_img5.png'
+                    alt='Clouds'>
             </div>
-            <div class='cloud x6'>
-                <img src="https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/sun.png" alt="Clouds">
+            <div class='cloud sun'>
+                <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v1/sun.png' alt='Clouds'>
             </div>
         </div>
     </div>
