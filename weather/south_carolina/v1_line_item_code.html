@@ -1,0 +1,48 @@
+<img src="%%VIEW_URL_UNESC%%" width="1" height="1" border="0" />
+
+<script>
+
+    var desktop_background = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/Bonzai_Unit_VSC_Oysters_Skin.png';
+    var click_URL = "https://www.google.com/";
+
+    var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = desktop_background;
+    allBannerImages[1] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/Bonzai_Unit_VSC_Oysters_Content.png';
+    allBannerImages[2] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img1.png';
+    allBannerImages[3] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img2.png';
+    allBannerImages[4] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img3.png';
+    allBannerImages[5] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img4.png';
+    allBannerImages[6] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img5.png';
+    allBannerImages[7] = 'https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/sun.png';
+
+
+    allBannerImages.forEach(function (imgSrc) {
+        var newImgTag = parent.document.createElement('img');
+        newImgTag.src = imgSrc;
+        newImgTag.addEventListener('load', function () {
+            newImgTag.remove();
+            uploadImagesCount++;
+
+            if (allBannerImages.length == uploadImagesCount) {
+                var css = "#top,#bottom{width:970px;margin:0px auto}.headI{height:250px;width:100%;position:absolute;left:0px;top:120px;z-index:9999}.template-root .page-subnav{background:#ebebeb;padding:0px 10px 16px !important;margin-bottom:0px !important}.lol{position:relative;width:100%;margin:0px auto;height:100vh;background:transparent;margin-top:367px;z-index:1;cursor:pointer}.innerL{width:960px;margin:0px auto;height:100vh;background:#ebebeb}.base-footer.is-en{position:relative}.breadcrumbs-wrapper{padding-left:0;position:relative}.content-module{position:relative}.DDD{z-index:0;position:fixed;left:0px;top:0px;width:100%;height:100vh;overflow:hidden;background:url(https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/Bonzai_Unit_VSC_Oysters_Skin.png) no-repeat center 67px;background-attachment:scroll}.CLICDIV2{position:absolute;width:100%;overflow:hidden;height:250px;top:46px}.CLICDIV2 .topC{cursor:pointer;width:100%;left:0px;position:absolute;height:250px;top:0px}.template-root .page-subnav{position:relative;background:#ebebeb;padding:0px 10px}.page-subheader{margin-bottom:250px !important}.two-column-page-content{background:#ebebeb;position:relative}.CLICDIV{position:absolute;width:100%;overflow:hidden;height:100vh}.CLICDIV .leftC{cursor:pointer;width:calc((100% - 960px)/2);left:0px;position:fixed;height:100vh}.CLICDIV .rightC{cursor:pointer;width:calc((100% - 960px)/2);right:0px;position:fixed;height:100vh}.clouds{position:absolute;width:100%;height:100%;top:0;left:0}#clouds{padding:100px 0;height:100vh;background:url(https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/Bonzai_Unit_VSC_Oysters_Content.png) center 67px}.cloud{position:absolute;height:auto;width:auto;text-align:center}.clouds img{transform:scale(.6);opacity:0.8}.clouds .sun img{transform:scale(1);opacity:0.9}.cloud1,.cloud2,.cloud3,.cloud4,.cloud5{opacity:0}.cloud1{-webkit-animation:movecloud1 120s 0s linear infinite;animation:movecloud1 120s 0s linear infinite;top:23%}.cloud2{-webkit-animation:movecloud2 120s 0s linear infinite;animation:movecloud2 120s 0s linear infinite;top:35%}.cloud3{-webkit-animation:movecloud1 120s 45s linear infinite;animation:movecloud1 120s 45s linear infinite;top:20%}.cloud4{-webkit-animation:movecloud2 120s 0s linear infinite;animation:movecloud2 120s 0s linear infinite;top:11%}.cloud5{-webkit-animation:movecloud3 90s 45s linear infinite;animation:movecloud3 90s 45s linear infinite;top:5%}.sun{-webkit-animation:rotation 120s 0s infinite linear;animation:rotation 120s 0s infinite linear;right:-16%;top:-20%}@-webkit-keyframes movecloud1{0%{right:-15%;opacity:1}100%{right:110%;opacity:1}}@keyframes movecloud1{0%{right:-15%;opacity:1}100%{right:110%;opacity:1}}@-webkit-keyframes movecloud2{0%,100%{right:20%;opacity:1}40%{right:110%;opacity:1}41%{right:110%;opacity:0}42%{right:-30%;opacity:0}43%{right:-25%;opacity:1}}@keyframes movecloud2{0%,100%{right:20%;opacity:1}40%{right:110%;opacity:1}41%{right:110%;opacity:0}42%{right:-30%;opacity:0}43%{right:-25%;opacity:1}}@-webkit-keyframes movecloud3{0%{right:-20%;opacity:1}100%{right:110%;opacity:1}}@keyframes movecloud3{0%{right:-20%;opacity:1}100%{right:110%;opacity:1}}@-webkit-keyframes rotation{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(359deg)}}@keyframes rotation{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(359deg)}}",
+                    head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+                    style = parent.document.createElement('style');
+
+                head.appendChild(style);
+                style.type = 'text/css';
+                if (style.styleSheet) {
+                    style.styleSheet.cssText = css;
+                } else {
+                    style.appendChild(document.createTextNode(css));
+                }
+
+                var node3 = parent.document.querySelector("body").firstChild,
+                    ele3 = document.createElement("div");
+                ele3.className = "DDD";
+                ele3.innerHTML = "<a href='" + click_URL + "' target='_blank'><div class='headI'></div><div class='lol'><div class='innerL'></div></div> </a><div id='clouds' class='clouds'><div class='cloud cloud1'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img1.png' alt='Clouds'></div><div class='cloud cloud2'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img2.png' alt='Clouds'></div><div class='cloud cloud3'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img3.png' alt='Clouds'></div><div class='cloud cloud4'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img4.png' alt='Clouds'></div><div class='cloud cloud5'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/cloud_img5.png' alt='Clouds'></div><div class='cloud sun'> <img src='https://creative.sebpo.com/accuweather/2020/Bonzai_Unit_VSC/Oysters/v2/sun.png' alt='Clouds'></div></div>";
+                node3.parentNode.insertBefore(ele3, node3.nextSibling);
+
+            }
+        });
+    });
+</script>
