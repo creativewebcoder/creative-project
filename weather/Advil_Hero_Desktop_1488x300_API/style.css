@@ -1,0 +1,225 @@
+.banner-item {
+	background: url(http://creative.sebpo.com/accuweather/2020/Advil/desktop_hero/v2/desktop_1488x300_bg.png) no-repeat;
+	background-position: center;
+	margin-top: -24px;
+	margin-bottom: 50px;
+	background-size: 100%;
+	cursor: pointer
+}
+.bannerWrap {
+	width: 970px;
+	height: 300px;
+	background: url(http://creative.sebpo.com/accuweather/2020/Advil/desktop_hero/v2/desktop_1488x300_content.png) no-repeat;
+	margin: 0px auto;
+	margin-top: 0px
+}
+.dynamicCont {
+	float: right;
+	width: 600px;
+	height: 250px
+}
+.single .details,
+.single .details h6,
+.single .details p,
+.single .details span {
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	line-height: 17px
+}
+.wrapSVG {
+    position: relative;
+    width: 40px;
+	float: left
+}
+.wrapSVG span {
+	position: absolute;
+	top: 40px;
+	left: 50px;
+	font-size: 15px
+}
+
+.centerAll {
+	padding: 45px 0px;
+	overflow: auto
+}
+.single {
+	text-align: center;
+	overflow: hidden;
+	width: 298px;
+	float: left;
+	padding: 0px 0px 0px 20px;
+	margin-top: 56px
+}
+.single .details {
+	width: 234px;
+	text-align: left;
+	float: right;
+	font-size: 13px
+}
+
+.single img {
+	float: left;
+	display: block;
+	margin-bottom: 5px
+}
+.single p.module-header {
+	margin: 0px;
+	font-size: 12px
+}
+.single h6 {
+	margin: 8px 0px 10px;
+	font-size: 18px
+}
+.single>span {
+	float: left;
+	display: block;
+	width: 100%;
+	font-size: 14px
+}
+ul.scale {
+	padding: 0px;
+	width: 30px;
+	list-style: none;
+	margin: 0px
+}
+ul.scale li {
+	width: 100%;
+	background: #313131;
+	margin-bottom: 5px;
+	height: 7px
+}
+.scale>li:nth-child(1) {
+	transition: all 5s ease
+}
+.scale>li:nth-child(2) {
+	transition: all 4.5s ease
+}
+.scale>li:nth-child(3) {
+	transition: all 4s ease
+}
+.scale>li:nth-child(4) {
+	transition: all 3.5s ease
+}
+.scale>li:nth-child(5) {
+	transition: all 3s ease
+}
+.scale>li:nth-child(6) {
+	transition: all 2.5s ease
+}
+.scale>li:nth-child(7) {
+	transition: all 2s ease
+}
+.scale>li:nth-child(8) {
+	transition: all 1.5s ease
+}
+.scale>li:nth-child(9) {
+	transition: all 1s ease
+}
+.scale>li:nth-child(10) {
+	transition: all .5s ease
+}
+.active.scale>li:nth-child(1) {
+	background: #a03f00
+}
+.active.scale>li:nth-child(2) {
+	background: #b34700
+}
+.active.scale>li:nth-child(3) {
+	background: #b34700
+}
+.active.scale>li:nth-child(4) {
+	background: #dc5700
+}
+.active.scale>li:nth-child(5) {
+	background: #ef6002
+}
+.active.scale>li:nth-child(6) {
+	background: #ff6500
+}
+.active.scale>li:nth-child(7) {
+	background: #fd7318
+}
+.active.scale>li:nth-child(8) {
+	background: #fe934c
+}
+.active.scale>li:nth-child(9) {
+	background: #fe934c
+}
+.active.scale>li:nth-child(10) {
+	background: #ffa163
+}
+ul.scale.C9>li:nth-child(1) {
+	background: #313131
+}
+ul.scale.C8>li:nth-child(1),
+ul.scale.C8>li:nth-child(2) {
+	background: #313131
+}
+ul.scale.C7>li:nth-child(1),
+ul.scale.C7>li:nth-child(2),
+ul.scale.C7>li:nth-child(3) {
+	background: #313131
+}
+ul.scale.C6>li:nth-child(1),
+ul.scale.C6>li:nth-child(2),
+ul.scale.C6>li:nth-child(3),
+ul.scale.C6>li:nth-child(4) {
+	background: #313131
+}
+ul.scale.C5>li:nth-child(1),
+ul.scale.C5>li:nth-child(2),
+ul.scale.C5>li:nth-child(3),
+ul.scale.C5>li:nth-child(4),
+ul.scale.C5>li:nth-child(5) {
+	background: #313131
+}
+ul.scale.C4>li:nth-child(1),
+ul.scale.C4>li:nth-child(2),
+ul.scale.C4>li:nth-child(3),
+ul.scale.C4>li:nth-child(4),
+ul.scale.C4>li:nth-child(5),
+ul.scale.C4>li:nth-child(6) {
+	background: #313131
+}
+ul.scale.C3>li:nth-child(1),
+ul.scale.C3>li:nth-child(2),
+ul.scale.C3>li:nth-child(3),
+ul.scale.C3>li:nth-child(4),
+ul.scale.C3>li:nth-child(5),
+ul.scale.C3>li:nth-child(6),
+ul.scale.C3>li:nth-child(7) {
+	background: #313131
+}
+ul.scale.C2>li:nth-child(1),
+ul.scale.C2>li:nth-child(2),
+ul.scale.C2>li:nth-child(3),
+ul.scale.C2>li:nth-child(4),
+ul.scale.C2>li:nth-child(5),
+ul.scale.C2>li:nth-child(6),
+ul.scale.C2>li:nth-child(7),
+ul.scale.C2>li:nth-child(8) {
+	background: #313131
+}
+ul.scale.C1>li:nth-child(1),
+ul.scale.C1>li:nth-child(2),
+ul.scale.C1>li:nth-child(3),
+ul.scale.C1>li:nth-child(4),
+ul.scale.C1>li:nth-child(5),
+ul.scale.C1>li:nth-child(6),
+ul.scale.C1>li:nth-child(7),
+ul.scale.C1>li:nth-child(8),
+ul.scale.C1>li:nth-child(9) {
+	background: #313131
+}
+ul.scale.C0>li:nth-child(1),
+ul.scale.C0>li:nth-child(2),
+ul.scale.C0>li:nth-child(3),
+ul.scale.C0>li:nth-child(4),
+ul.scale.C0>li:nth-child(5),
+ul.scale.C0>li:nth-child(6),
+ul.scale.C0>li:nth-child(7),
+ul.scale.C0>li:nth-child(8),
+ul.scale.C0>li:nth-child(9),
+ul.scale.C0>li:nth-child(10) {
+	background: #313131
+}
