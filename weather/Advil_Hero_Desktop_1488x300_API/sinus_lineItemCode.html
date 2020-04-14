@@ -47,10 +47,11 @@ var allBannerImages = [], uploadImagesCount=0;
 
                         
                         let cityKey = parent.currentLocation.key;
+                        let indices = 30; // 30 for sinus-weather
 
-                        var apiUrl = `http://api.accuweather.com/indices/v1/daily/5day/${cityKey}/27?apikey=103cf8ebc1de4830a8b773a59680a59d&details=true`;
+                        var apiUrl = `http://api.accuweather.com/indices/v1/daily/5day/${cityKey}/${indices}?apikey=103cf8ebc1de4830a8b773a59680a59d&details=true`;
                         parent.$.getJSON(apiUrl, function (data) {
-                             console.log(data);
+                            // console.log(data);
                             let Temp = data.slice(0, 2);
                             // console.log(Temp);
                             parent.$.each(Temp, function (index, object) {
