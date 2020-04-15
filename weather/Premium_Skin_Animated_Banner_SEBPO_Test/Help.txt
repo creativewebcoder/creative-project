@@ -1,0 +1,5 @@
+LineItem : https://admanager.google.com/6581#delivery/PreviewCreative/orderId=2350052098&lineItemId=5066586622&creativeId=138276700912
+
+Preview Link : https://www.accuweather.com/en/us/new-york/10007/weather-forecast/349727
+
+Image link : http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/

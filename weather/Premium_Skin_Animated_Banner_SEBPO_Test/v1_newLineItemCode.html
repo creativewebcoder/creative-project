@@ -1,0 +1,77 @@
+<img src="%i" height="1" width="1" border="0" />
+
+<script>
+    var css = "#creativeBG{height:300px}#clicktag{width:100%;height:100%;z-index:10 !important;cursor:pointer;position:absolute;padding:0;margin:0;top:0;left:0;display:none;right:0}#bannerWrapper *{padding:0;margin:0;position:absolute}#bannerWrapper{background:url(http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/bg_desktop.jpg) no-repeat;width:100%;height:300px;position:absolute;background-size:cover;overflow:hidden;user-select:none;margin-top:-24px}#bannerContent{width:960px;height:300px;top:0;left:50%;margin-top:20px;transform:translateX(-480px)}.is-loaded *{animation-play-state:running !important}.logo{top:20px}.copy1{top:95px;-webkit-animation:copyAnimFromTop .5s .5s both;animation:copyAnimFromTop .5s .5s both}.copy2{top:200px;left:12px;-webkit-animation:copyAnimFromTop .5s 1s both;animation:copyAnimFromTop .5s 1s both}.ctaBtn{top:245px;left:15px;background-color:#f4793e;width:180px;height:35px;border-radius:10px;border:2px solid #fff;display:block;overflow:hidden;-webkit-animation:ctaBtnAnim .5s 1.5s both;animation:ctaBtnAnim .5s 1.5s both;-webkit-transition:all .5s ease;transition:all .5s ease}.ctaBtn:hover{background-color:#609716;-webkit-transition:all .5s ease;transition:all .5s ease}.ctaBtn .ctaCopy{top:0;left:50%;transform:translate(-64px, 10px)}.ctaBtn .ctaGlow{top:-2px;left:-50px;-webkit-animation:ctaGlowAnim 2s 2.5s both;animation:ctaGlowAnim 2s 2.5s both}.banner-item{margin-top:24px}div#primoFC{width:100%;height:300px;margin:0 auto;position:relative;margin-bottom:50px;margin-top:-24px;cursor:pointer}.videoPlaceholder{width:400px;height:235px;top:32px;right:50%;transform:translateX(480px);position:absolute;z-index:1}.videoPlaceholder *{position:absolute;margin:0;padding:0}.videoPlaceholder video{border:10px solid #ebebeb}.videoPlaceholder .playBtn{width:100%;height:100%;z-index:100 !important;cursor:pointer;opacity:0.7}.videoPlaceholder .playBtn img{max-width:81px;left:0;margin:0 auto !important;right:0;top:30%}@-webkit-keyframes copyAnimFromTop{from{transform:translateY(-30px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes copyAnimFromTop{from{transform:translateY(-30px);opacity:0}to{transform:translateY(0);opacity:1}}@-webkit-keyframes ctaGlowAnim{from{transform:translateX(-60px)}to{transform:translateX(320px)}}@keyframes ctaGlowAnim{from{transform:translateX(-60px)}to{transform:translateX(320px)}}@-webkit-keyframes ctaBtnAnim{from{opacity:0}to{opacity:1}}@keyframes ctaBtnAnim{from{opacity:0}to{opacity:1}}@media only screen and (max-width: 979px) and (min-width: 768px){#bannerContent{width:96%;transform:translateX(-50%)}.copy1,.copy2{width:50%}.videoPlaceholder{width:350px;height:205px;top:43px}.videoPlaceholder video{width:350px}}@media(max-width:768px){.videoPlaceholder{display:none}div#primoFC{margin-bottom:30px}}@media(max-width:767px){#creativeBG{height:250px}div#primoFC{height:250px;margin-bottom:10px}#bannerWrapper{background:url(http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/bg_mobile.jpg) no-repeat;height:250px}#bannerContent{width:100vw;height:250px;transform:translateX(0);left:10px}.copy1,.copy2{width:70%}.copy2{top:166px;left:10px}.ctaBtn{top:195px;left:10px}.videoPlaceholder{display:none}}@media only screen and (max-width: 767px) and (min-width: 421px){#bannerWrapper{background-size:cover}.copy1,.copy2{width:44%}}",
+        head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+        style = parent.document.createElement('style');
+
+    head.appendChild(style);
+
+    style.type = 'text/css';
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+
+    var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/bg_desktop.jpg';
+    allBannerImages[1] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/bg_mobile.jpg';
+    allBannerImages[2] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/logo.png';
+    allBannerImages[3] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/copy1.png';
+    allBannerImages[4] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/copy2.png';
+    allBannerImages[5] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/cta_glow.png';
+    allBannerImages[6] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/cta_copy.png';
+    allBannerImages[7] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/poster.jpg';
+    allBannerImages[8] = 'http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/playBig.png';
+
+    allBannerImages.forEach(function (imgSrc) {
+        var newImgTag = parent.document.createElement('img');
+        newImgTag.src = imgSrc;
+        newImgTag.addEventListener('load', function () {
+            newImgTag.remove();
+            uploadImagesCount++;
+
+            if (allBannerImages.length == uploadImagesCount) {
+
+                var node = parent.document.querySelector(".page-subheader") || parent.document.querySelector(".nfl-page-subheader"),
+                    ele = document.createElement("div");
+                ele.className = "banner-item";
+                ele.innerHTML = "<div id='primoFC'><div id='creativeBG'><div class='videoPlaceholder'><div class='playBtn'><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/playBig.png' alt='' ></div><video id='bannerVideo' poster='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/poster.jpg' width='400' > <source src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/video/SERVPRO_Commercial_Water_30.mp4' type='video/mp4'> Your browser does not support HTML5 video.</video></div><div id='bannerWrapper' class='is-loaded'><div id='bannerContent'><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/logo.png' alt='' class='logo'><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/copy1.png' alt='' class='copy1'><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/copy2.png' alt='' class='copy2'><a class='ctaBtn' href=''><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/cta_glow.png' alt='' class='ctaGlow'><img src='http://creative.sebpo.com/accuweather/2020/AW_Site_Update/Hero_Anim/v1/images/cta_copy.png' alt='' class='ctaCopy'></a></div></div></div></div>";
+                node.parentNode.insertBefore(ele, node.nextSibling);
+
+
+
+
+
+
+                var bannerVideo = parent.document.getElementById("bannerVideo");
+                var playBtn = parent.document.querySelector(".playBtn");
+
+                playBtn.onclick = function () {
+                    console.log('video play');
+                    bannerVideo.setAttribute('controls', '');
+                    bannerVideo.play();
+                    this.remove();
+                }
+
+                var Click_URL = 'http://www.google.com';
+                var ClickTag = parent.document.getElementById("bannerWrapper");
+
+                try {
+                    ClickTag.onclick = function () {
+                        window.open(Click_URL, '_blank');
+                    };
+                } catch (error) {
+                    console.log('click not working');
+                }
+
+
+
+                var elem = parent.document.getElementById('top-1');
+                if (elem) { elem.parentNode.removeChild(elem); }
+            }
+        });
+    });
+
+</script>
