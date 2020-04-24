@@ -1,7 +1,10 @@
 var config = {
     "formate" : "inter_scroller",
     "adType": "video", // {"static", "animated", "video", "carousel", "parallex", "hotspots"}
-    "dimention":"375x667", // ad width x ad height
+    "adSize":{
+        "width":"375px",
+        "height":"665px"
+    }, // ad width x ad height
     "size":"2MB", // max size
     "adContainer":".bannerContainer", // advert inject container id
     "cta": {

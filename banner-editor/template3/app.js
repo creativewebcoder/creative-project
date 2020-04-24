@@ -23,10 +23,11 @@ function initScrollMagic(){
 	var pinIntroScene = new ScrollMagic.Scene({
 		triggerElement: '.bannerContainer',
         triggerHook: 0,
-        duration: 667
+        duration: 5000
 		// duration: '30%'
 	})
-	.setPin('.bannerContainer', {pushFollowers: false})
+    .setPin('.bannerContainer', {pushFollowers: false})
+    // .addIndicators({name: "bannerContainer"}) 
 	.addTo(controller);
 
 	// // pin again
@@ -39,39 +40,42 @@ function initScrollMagic(){
 
     var tween = TweenMax.to('.rotateImg ', 0.5, {
         scale: 1,
+        x:"100%",
         rotation: 360
       });
 
-    var scene = new ScrollMagic.Scene({triggerElement: ".bannerContainer", duration: 667})
+      //var tween = TweenMax.from(".rotateImg", 1, {x:"100%",rotation: 360});
+
+    var scene = new ScrollMagic.Scene({triggerElement: ".bannerContainer", triggerHook: .7, duration: 5000})
 					// animate color and top border in relation to scroll position
 					.setTween(tween) // the tween durtion can be omitted and defaults to 1
                     .setClassToggle(".logo", 'fadeIn')
                     //.setClassToggle(".copy1", 'fadeInBottom')
-                    .addIndicators({name: "logo  (duration: 667)"}) // add indicators (requires plugin)
+                    // .addIndicators({
+                    //     		name: 'logo',
+                    //     		colorTrigger: 'black',
+                    //     		colorStart: '#75C695',
+                    //     		colorEnd: 'pink'
+                    //     	})  // add indicators (requires plugin)
 					.addTo(controller);
     
 
 
+    
 
-	// $('.products img').each(function(){
+	$('.products img').each(function(){
+		// build a scene
+		var ourScene = new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 1,
+            reverse:false,
+		    duration: 5000
+			// triggerHook: 0.9
+		})
+		.setClassToggle(this, 'moveFromRight') // add class to project01
+		.addTo(controller);
 
-	// 	// build a scene
-	// 	var ourScene = new ScrollMagic.Scene({
-    //         triggerElement: this.children[0],
-    //         //triggerHook: "onEnter",
-	// 	    duration: 300
-	// 		// triggerHook: 0.9
-	// 	})
-	// 	.setClassToggle(this, 'fade-in') // add class to project01
-	// 	.addIndicators({
-	// 		name: 'fade scene',
-	// 		colorTrigger: 'black',
-	// 		colorStart: '#75C695',
-	// 		colorEnd: 'pink'
-	// 	}) // this requires a plugin
-	// 	.addTo(controller);
-
-	// });
+	});
 }
 }
 
@@ -80,7 +84,8 @@ function createAd(){
     if(config){
         let adData = config;
         let adContainer = $(adData.adContainer);
-        let adContainerDimention = adData.dimention.split("x");
+        let adContainerWidth = adData.adSize.width;
+        let adContainerHeight = adData.adSize.height;
         let adImages = adData.images;
         let adCopyArray = adData.copy;
         let adVideoSettings = adData.video;
@@ -89,8 +94,10 @@ function createAd(){
         // console.log(adContainer)
 
         // set ad width and height
-        adContainer.width(adContainerDimention[0]+'px');
-        adContainer.height(adContainerDimention[1]+'px');
+        adContainer.width(adContainerWidth);
+        adContainer.height(adContainerHeight);
+        adContainer.css('margin-bottom','5000px');
+
 
         // set ad background image
         if(adImages['bgImg']){
@@ -108,13 +115,13 @@ function createAd(){
 
         // set ad products
         if(adImages['product1']){
-            adContainer.find('.products').append('<img class="cssanimation moveFromRight product1" src="'+ adImages['product1'] + '" />');
+            adContainer.find('.products').append('<img class="cssanimation product1" src="'+ adImages['product1'] + '" />');
         }
         if(adImages['product2']){
-            adContainer.find('.products').append('<img class="cssanimation moveFromRight product2" src="'+ adImages['product2'] + '" />');
+            adContainer.find('.products').append('<img class="cssanimation product2" src="'+ adImages['product2'] + '" />');
         }
         if(adImages['product3']){
-            adContainer.find('.products').append('<img class="cssanimation moveFromRight product3" src="'+ adImages['product3'] + '" />');
+            adContainer.find('.products').append('<img class="cssanimation product3" src="'+ adImages['product3'] + '" />');
         }
         
         
