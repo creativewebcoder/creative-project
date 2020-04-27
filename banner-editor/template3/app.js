@@ -33,7 +33,7 @@ function initScrollMagic(){
         // triggerHook: 0.3,
         duration: "100%"
     })
-    .setPin(".bannerContainer")
+    .setPin(".bannerContainer", {pushFollowers: true})
     //.on("enter leave", stopAdFn)
     .setTween(tl)
     //.addIndicators({name: "bannerContainer"}) 
@@ -54,6 +54,15 @@ function initScrollMagic(){
     //     console.log("Hit end point of scene.");
     //     stopAdFn();
     // });
+
+    // scene.on("leave", function (event) {
+    //     console.log("Scene left.");
+    //     stopAdFn();
+    // });
+
+    scene.on("shift", function (event) {
+        console.log("Scene moved, because the " + event.reason + " has changed.)");
+    });
 
     function stopAdFn(){
         var bannerVideo = document.querySelector(".bannerContainer video"); 
