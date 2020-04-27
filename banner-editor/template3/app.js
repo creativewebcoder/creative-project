@@ -10,72 +10,75 @@ $( document ).ready(function() {
 
 function initScrollMagic(){
     if(config){
-        // let adData = config;
-        // let adContainer = adData.adContainer+' .rotateImg ';        
-        // let videoContainer = adContainer.find('.video');
-        // let productsContainer = adContainer.find('.products');
-    // Init ScrollMagic Controller
-  // Init ScrollMagic
-    var controller = new ScrollMagic.Controller();
+        let adData = config;
+        let adContainer = adData.adContainer;        
+       
+    const controller = new ScrollMagic.Controller();
 
+    var tl = new TimelineMax({onUpdate:updatePercentage});
 
-    // pin the intro
-	var pinIntroScene = new ScrollMagic.Scene({
-		triggerElement: '.bannerContainer',
-        triggerHook: 0,
-        duration: 5000
-		// duration: '30%'
-	})
-    .setPin('.bannerContainer', {pushFollowers: false})
-    // .addIndicators({name: "bannerContainer"}) 
-	.addTo(controller);
+    tl.from(adContainer+" .logo", 1, {alpha:0});
+    tl.from(adContainer+' .copy1', 1.5, {x:200, opacity: 0});        
+    tl.from(adContainer+' .copy2', 2, {x:-200, opacity: 0});
+    tl.from(adContainer+' .video', 2, {alpha:0, onComplete: videoPlayFn});
+    // tl.from(adContainer+' .video', 2, {alpha:0});
+    tl.from(adContainer+' .product1', 2, {x:300, opacity: 0});
+    tl.from(adContainer+' .product2', 2.5, {x:300, opacity: 0});
+    tl.from(adContainer+' .product3', 3, {x:300, opacity: 0});
+    tl.from(adContainer+' .rotateImg', 5, {x:400, alpha:1, rotation: 360});
 
-	// // pin again
-	// var pinIntroScene2 = new ScrollMagic.Scene({
-	// 	triggerElement: '#project01',
-	// 	triggerHook: 0.4
-	// })
-	// .setPin('.bannerContainer', {pushFollowers: false})
-	// .addTo(controller);
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".bannerContainer",
+        triggerHook: "onLeave",
+        // triggerHook: 0.3,
+        duration: "100%"
+    })
+    .setPin(".bannerContainer")
+    //.on("enter leave", stopAdFn)
+    .setTween(tl)
+    //.addIndicators({name: "bannerContainer"}) 
+    .addTo(controller);
 
-    var tween = TweenMax.to('.rotateImg ', 0.5, {
-        scale: 1,
-        x:"100%",
-        rotation: 360
-      });
+    function updatePercentage(){
+        tl.progress();
+        //console.log(tl.progress());
 
-      //var tween = TweenMax.from(".rotateImg", 1, {x:"100%",rotation: 360});
+    }
 
-    var scene = new ScrollMagic.Scene({triggerElement: ".bannerContainer", triggerHook: .7, duration: 5000})
-					// animate color and top border in relation to scroll position
-					.setTween(tween) // the tween durtion can be omitted and defaults to 1
-                    .setClassToggle(".logo", 'fadeIn')
-                    //.setClassToggle(".copy1", 'fadeInBottom')
-                    // .addIndicators({
-                    //     		name: 'logo',
-                    //     		colorTrigger: 'black',
-                    //     		colorStart: '#75C695',
-                    //     		colorEnd: 'pink'
-                    //     	})  // add indicators (requires plugin)
-					.addTo(controller);
+    // scene.on("start", function (event) {
+    //     console.log("Hit start point of scene.");
+    //     videoPlayFn()
+    // });
+
+    // scene.on("end", function (event) {
+    //     console.log("Hit end point of scene.");
+    //     stopAdFn();
+    // });
+
+    function stopAdFn(){
+        var bannerVideo = document.querySelector(".bannerContainer video"); 
+        if (bannerVideo.paused) {
+            //bannerVideo.play(); 
+          }else { 
+            bannerVideo.pause(); 
+          } 
+        console.log('video stop');
+    }
     
 
-
-    
-
-	$('.products img').each(function(){
-		// build a scene
-		var ourScene = new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 1,
-            reverse:false,
-		    duration: 5000
-			// triggerHook: 0.9
-		})
-		.setClassToggle(this, 'moveFromRight') // add class to project01
-		.addTo(controller);
-
-	});
+   // document.querySelector(".bannerContainer .video").addEventListener("transitionend", videoPlayFn);
+    function videoPlayFn(){
+        var bannerVideo = document.querySelector(".bannerContainer video"); 
+        console.log('video auto play');
+        bannerVideo.setAttribute('controls','');
+        bannerVideo.muted = true;
+        bannerVideo.currentTime = 0;
+        bannerVideo.play();
+        if(document.querySelector(".bannerContainer .playIcon")){
+            document.querySelector(".bannerContainer .playIcon").remove();    
+        }
+        
+    }
 }
 }
 
@@ -96,7 +99,7 @@ function createAd(){
         // set ad width and height
         adContainer.width(adContainerWidth);
         adContainer.height(adContainerHeight);
-        adContainer.css('margin-bottom','5000px');
+        //adContainer.css('margin-bottom','5000px');
 
 
         // set ad background image
@@ -115,13 +118,13 @@ function createAd(){
 
         // set ad products
         if(adImages['product1']){
-            adContainer.find('.products').append('<img class="cssanimation product1" src="'+ adImages['product1'] + '" />');
+            adContainer.find('.products').append('<img class=" product1" src="'+ adImages['product1'] + '" />');
         }
         if(adImages['product2']){
-            adContainer.find('.products').append('<img class="cssanimation product2" src="'+ adImages['product2'] + '" />');
+            adContainer.find('.products').append('<img class=" product2" src="'+ adImages['product2'] + '" />');
         }
         if(adImages['product3']){
-            adContainer.find('.products').append('<img class="cssanimation product3" src="'+ adImages['product3'] + '" />');
+            adContainer.find('.products').append('<img class=" product3" src="'+ adImages['product3'] + '" />');
         }
         
         
@@ -145,7 +148,7 @@ function createAd(){
                 if(adVideoSettings['playIcon']){
                     videoHtml += `<div class="playIcon"><img src="${adVideoSettings['playIcon']}" /></div>`; 
                 }
-                videoHtml += `<video `;
+                videoHtml += `<video muted  `;
                 if(adVideoSettings['controls']){
                     videoHtml += ` controls `; 
                 }

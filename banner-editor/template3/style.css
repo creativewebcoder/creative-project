@@ -36,9 +36,18 @@ body {
     background-size: cover;
 }
 
-.bannerContainer .logo {
-    opacity: 0;
+.ctaBtn {
+    padding: 5px 7px;
+    font-size: 14px;
+    color: white;
+    background-color: #222;
+    border-radius: 4px;
+    border:1px solid #ccc
 }
+
+/* .bannerContainer .logo {
+    opacity: 0;
+} */
 
 .bannerContainer .copy1 {
     color: white;

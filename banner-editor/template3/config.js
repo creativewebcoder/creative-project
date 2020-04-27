@@ -26,7 +26,7 @@ var config = {
 
     "copy": {
         "copy1":"SEE THE STORY",
-        "copy2":"<b>BEHIND THE SHAPE</b>",
+        "copy2":"<b style='color: #bafcff;'>BEHIND THE SHAPE</b>",
     },
 
     "video": {
