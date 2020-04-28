@@ -60,9 +60,9 @@ function initScrollMagic(){
     //     stopAdFn();
     // });
 
-    scene.on("shift", function (event) {
-        console.log("Scene moved, because the " + event.reason + " has changed.)");
-    });
+    // scene.on("shift", function (event) {
+    //     console.log("Scene moved, because the " + event.reason + " has changed.)");
+    // });
 
     function stopAdFn(){
         var bannerVideo = document.querySelector(".bannerContainer video"); 
