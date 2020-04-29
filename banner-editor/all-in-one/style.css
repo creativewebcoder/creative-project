@@ -1,19 +1,37 @@
-body {
-    margin: 0;
-    padding: 0;
+.ad-header {
+    background: rgb(0, 0, 0, 1);
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 99;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
+.ad-fotter {
+    overflow: hidden;
+    background: rgb(0, 0, 0, 1);
+    z-index: 99;
+    color: #fff;
+    padding: 3px 0;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
 }
-.content {
-    padding: 50px;
-    height: 900px;
-    border: 1px solid #222;
-    background-color: rgb(198, 227, 247);
-}
+
+
 
 .bannerContainer {
     border: 1px solid #222;
@@ -22,32 +40,24 @@ body {
     overflow: hidden;
 }
 
-.bannerContainer div {
+#main-ad {
+    margin: 0px;
+    border: 0;
+    padding: 0;
+    display: flex;
+}
+
+.bannerContainer #main-ad>div {
     position: absolute;
     padding: 0;
     margin: 0;
 
 }
-.adBg {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.ctaBtn {
-    padding: 5px 7px;
-    font-size: 14px;
-    color: white;
-    background-color: #222;
-    border-radius: 4px;
-    border:1px solid #ccc
-}
 
-/* .bannerContainer .logo {
-    opacity: 0;
-} */
+.bannerContainer .logo {
+    top: 10px;
+}
 
 .bannerContainer .copy1 {
     color: white;
@@ -79,14 +89,16 @@ body {
     top: unset;
     width: 100%;
     display: flex;
+    z-index: 9;
 }
+
 .bannerContainer .rotateLine {
     height: 20px;
     width: 100%;
     background-color: skyblue;
     position: absolute;
     bottom: 0;
-    top:u nset;
+    top: u nset;
 }
 
 .bannerContainer .playIcon {
@@ -96,10 +108,12 @@ body {
     cursor: pointer;
     z-index: 10;
 }
-.bannerContainer .products  {
+
+.bannerContainer .products {
     top: 405px !important;
     width: 100%;
 }
+
 .bannerContainer .products img {
     position: absolute;
     left: 0;
@@ -107,12 +121,14 @@ body {
 }
 
 .bannerContainer .products .product1 {
-    top:20px;
+    top: 20px;
     left: 0;
 }
+
 .bannerContainer .products .product2 {
-    left:90px;
+    left: 90px;
 }
+
 .bannerContainer .products .product3 {
     right: 0;
     left: unset;
@@ -124,3 +140,102 @@ body {
     width: 100%;
 }
 
+.bannerContainer .hotspots {
+    width: 320px;
+    height: 150px;
+    /* margin: 0 auto; */
+    background-color: yellow;
+    top: 200px;
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+    color: white;
+}
+
+.bannerContainer .hotspots .hotspotsImg img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes blinking {
+
+    0%,
+    100% {
+        background-color: rgba(153, 205, 50, 0.5);
+    }
+
+    50% {
+        background-color: rgba(153, 205, 50, 1);
+    }
+}
+
+.bannerContainer .hotspots .hotspotsPoint {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: yellowgreen;
+    border: 3px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 9;
+    animation: blinking 2s infinite;
+}
+
+.bannerContainer .hotspots .hotspotsPoint:hover {
+    background-color: red;
+    animation: none;
+}
+
+.bannerContainer .hotspots .hotspotsMsg {
+    width: 95%;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: rgba(66, 68, 80, 0.8);
+    border-top: 2px solid #222;
+    position: absolute;
+    padding: 3px 7px;
+    overflow: hidden;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: 9;
+    display: none;
+}
+
+.bannerContainer .hotspots .hotspotsMsg .hotspotsTitle {
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 2px;
+}
+
+.bannerContainer a.cta {
+    position: absolute;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 5px #414040;
+}
+
+.bannerContainer a.fullAdCta {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: block;
+    /* background-color: rgba(255, 0, 0, 0.281); */
+}

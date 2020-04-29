@@ -3,7 +3,7 @@ var config = {
     "adType": "hotspots", // {"static", "animated", "video", "carousel", "parallex", "hotspots"}
     "adSize":{
         "width":"375px",
-        "height":"665px"
+        "height":"667px"
     }, // ad width x ad height
     // "size":"2MB", // max size
     "adContainer":".bannerContainer", // advert inject container id

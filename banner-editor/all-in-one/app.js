@@ -10,11 +10,107 @@
 console.log(config)
 
 $(document).ready(function () {
-    createAd();
-    initScrollMagic();
-
-
+    if (config['adType'] == 'static') {
+        createStaticAd();
+    }else {
+        createDaynamicAd();
+    }
 });
+
+function createStaticAd(){
+    if (config) {
+        let adData = config;
+        let adContainer = $(adData.adContainer + ' #main-ad');
+        let adContainerWidth = adData.adSize.width;
+        let adContainerHeight = adData.adSize.height;
+        let adImages = adData.images;
+
+         // set ad width and height
+         $(adData.adContainer).width(adContainerWidth);
+         $(adData.adContainer).height(adContainerHeight);
+         adContainer.width(adContainerWidth);
+         adContainer.height(adContainerHeight);
+
+         // set ad background image
+        if (adImages['bgImg']) {
+            adContainer.css('background-image', 'url(' + adImages['bgImg'] + ')');
+            adContainer.css('background-attachment', 'fixed');
+        }
+
+        if(adData['cta']){
+            let ctaData = adData['cta'];
+            
+            
+            if(ctaData['ctaType'] != 'fullAdCta'){
+                let ctaHtml = '<a class="cta" target="_blank" ';
+
+                if(ctaData['url']){
+                    ctaHtml += ` href="${ctaData['url']}" `;
+                }
+                ctaHtml += ` style="`;
+                if(ctaData['color']){
+                    ctaHtml += ` color:${ctaData['color']} !important; `;
+                }            
+                if(ctaData['bgColor']){
+                    ctaHtml += ` background-color:${ctaData['bgColor']} !important; `;
+                }
+                if(ctaData['top']){
+                    ctaHtml += ` top:${ctaData['top']} !important; `;
+                }
+                if(ctaData['left']){
+                    ctaHtml += ` left:${ctaData['left']} !important; `;
+                }
+                
+                
+
+                ctaHtml += ` " >`;
+
+                if(ctaData['copy']){
+                    ctaHtml += ctaData['copy'];
+                }
+
+                ctaHtml += '</a>';
+                adContainer.append(ctaHtml);
+            } else {
+                console.log('cta add')
+                let ctaHtml = '<a class="fullAdCta" target="_blank" ';
+
+                if(ctaData['url']){
+                    ctaHtml += ` href="${ctaData['url']}" >&nbsp;`;
+                }
+
+                ctaHtml += '</a>';
+                adContainer.append(ctaHtml);
+
+            }
+
+            
+
+
+            
+        }
+
+
+
+        const controller = new ScrollMagic.Controller();
+
+        var tl = new TimelineMax();
+
+        const scene = new ScrollMagic.Scene({
+            triggerElement: adData.adContainer,
+            triggerHook: "onLeave",
+            // triggerHook: 0.3,
+            duration: "100%"
+        })
+            .setPin(adData.adContainer, { pushFollowers: true })
+            .setTween(tl)
+            // .addIndicators({name: "bannerContainer"}) 
+            .addTo(controller);
+
+    }
+}
+
+
 
 function initScrollMagic() {
     if (config) {
@@ -53,9 +149,7 @@ function initScrollMagic() {
         if (adData['hotspots']) {
             tl.from(adContainer + ' .hotspots', 2, { alpha: 0 });
         }
-        if (adData['cta']) {
-            tl.from(adContainer + ' .cta', 2, { alpha: 0 });
-        }
+        
         
 
         
@@ -69,9 +163,17 @@ function initScrollMagic() {
         if (adImages['product3']) {
             tl.from(adContainer + ' .product3', 3, { x: 300, opacity: 0 });
         }
+
+        if (adData['cta']) {
+            tl.from(adContainer + ' .cta', 2, { alpha: 0 });
+        }
+
+
         if (adImages['rotateImg']) {
             tl.from(adContainer + ' .rotateImg', 5, { x: 400, alpha: 1, rotation: 360 });
         }
+
+        
 
         const scene = new ScrollMagic.Scene({
             triggerElement: adContainer,
@@ -151,7 +253,7 @@ function initScrollMagic() {
     }
 }
 
-function createAd() {
+function createDaynamicAd() {
 
     if (config) {
         let adData = config;
@@ -170,7 +272,6 @@ function createAd() {
         $(adData.adContainer).height(adContainerHeight);
         adContainer.width(adContainerWidth);
         adContainer.height(adContainerHeight);
-        //adContainer.css('margin-bottom','5000px');
 
 
         // set ad background image
@@ -341,6 +442,7 @@ function createAd() {
             adContainer.append(ctaHtml);
         }
 
+        initScrollMagic();
 
     }
 }

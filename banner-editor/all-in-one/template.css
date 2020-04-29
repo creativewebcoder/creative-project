@@ -1,0 +1,453 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+section,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+section,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1.1;
+    background: white;
+}
+
+* {
+    -webkit-text-size-adjust: none
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    content: "."
+}
+
+html {
+    background: #ffffff
+}
+
+html .qr-code {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    /*position: fixed;*/
+    top: 0;
+    height: 48px;
+    width: 1058px;
+    background: #e7e7e7;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 9999;
+}
+
+header .brand-logo {
+    float: left;
+    width: 186px;
+    height: 40px;
+    margin-top: 3px;
+}
+
+header .mobile-menu-button {
+    float: right;
+    margin: 14px 8px;
+    width: 24px;
+    height: 18px;
+}
+
+header .mobile-menu-button .line {
+    margin-bottom: 3px;
+    width: 24px;
+    height: 4px;
+    background: #ffffff;
+}
+
+.rightside {
+    float: right
+}
+
+.rightside {
+    display: block;
+    width: 300px;
+}
+
+.rightside section,
+.leftside section {
+    margin-left: 0
+}
+
+.leftside {
+    float: left;
+    width: 160px;
+}
+
+.leftside section .image-placeholder {
+    float: none;
+    width: 160px;
+    height: 98px;
+}
+
+section {
+    overflow: hidden;
+    background: #ffffff;
+}
+
+main.section {
+    margin: 0 0 0 0
+}
+
+section.up {
+    margin: 0
+}
+
+section .text-placeholder {
+    overflow: hidden
+}
+
+section .text-line {
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+section .text-line {
+    width: 100%;
+    background: #dce4f1;
+}
+
+section .image-placeholder {
+    overflow: hidden;
+    background: #dce4f1;
+}
+
+.content {
+    margin: 0 auto;
+    background: #ffffff;
+    width: 1058px;
+}
+
+.ad-placeholder-wrapper {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.ad-placeholder-wrapper.show-overflow {
+    overflow: visible
+}
+
+.ad-placeholder-wrapper.bottom {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.ad-placeholder-wrapper .ad-placeholder {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-offset {
+    /*height: 63px*/
+}
+
+.header_container {
+    width: 1058px;
+    margin: 0 auto;
+}
+
+.ad-placeholder-wrapper {
+    padding-bottom: 15px
+}
+
+section {
+    margin-bottom: 15px
+}
+
+section .text-line {
+    height: 9px;
+    margin-bottom: 12px;
+}
+
+main {
+    float: left;
+    width: 583px;
+}
+
+main section {
+    height: 98px;
+    margin: 0 0 15px 0;
+}
+
+main section .text-placeholder {
+    float: none;
+    width: auto;
+    height: auto;
+    max-height: 98px;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+main section .text-placeholder div:nth-child(5) {
+    width: 75%;
+}
+
+main .first .text-placeholder div:nth-child(5) {
+    width: 100%;
+}
+
+main .first .text-placeholder div:nth-child(10) {
+    width: 75%;
+}
+
+main section .text-placeholdera {
+    float: none;
+    width: auto;
+    height: auto;
+    max-height: 98px;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+main section .image-placeholder {
+    float: left;
+    width: 160px;
+    height: 98px;
+}
+
+.first {
+    height: 249px
+}
+
+.first .text-placeholder {
+    float: none;
+    width: auto;
+    height: auto;
+    max-height: 208px;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+.first .text-placeholdera {
+    float: none;
+    width: auto;
+    height: auto;
+    max-height: 208px;
+    padding: 0 0 0 0px;
+    margin: 0;
+}
+
+.first .image-placeholder {
+    float: left;
+    width: 350px;
+    height: 249px;
+}
+
+aside section {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+aside section .text-placeholder {
+    float: none;
+    width: auto;
+    height: auto;
+    max-height: 54px;
+    padding: 12px 0 0 0;
+    margin: 0;
+}
+
+aside section .image-placeholder {
+    float: none;
+    width: 300px;
+    height: 178px;
+}
+
+.width-30 {
+    height: 45px !important;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #dce4f1;
+    margin: 0px 0 12px;
+}
+
+section .header-text-box {
+    height: 50px;
+}
+
+
+/* interscroller ad css  */
+
+
+@media screen and (max-width: 992px) {
+    header {
+        width: 100vw;
+    }
+
+    .header_container {
+        width: 100vw;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .content {
+        width: 100vw;
+
+    }
+
+    .leftside {
+        display: none;
+    }
+
+    main section .text-placeholder {
+        padding: 0;
+    }
+
+    .rightside {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    header {
+        width: 100vw;
+    }
+
+    .header_container {
+        width: 100vw;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .content {
+        width: 100vw;
+
+    }
+
+    .leftside {
+        display: none;
+    }
+
+    main section .text-placeholder {
+        padding: 0;
+    }
+
+    .rightside {
+        display: none;
+    }
+
+}
