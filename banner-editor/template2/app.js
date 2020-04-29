@@ -12,8 +12,6 @@ console.log(config)
 $(document).ready(function () {
     createAd();
     initScrollMagic();
-
-
 });
 
 function initScrollMagic() {
@@ -53,9 +51,7 @@ function initScrollMagic() {
         if (adData['hotspots']) {
             tl.from(adContainer + ' .hotspots', 2, { alpha: 0 });
         }
-        if (adData['cta']) {
-            tl.from(adContainer + ' .cta', 2, { alpha: 0 });
-        }
+        
         
 
         
@@ -69,9 +65,17 @@ function initScrollMagic() {
         if (adImages['product3']) {
             tl.from(adContainer + ' .product3', 3, { x: 300, opacity: 0 });
         }
+
+        if (adData['cta']) {
+            tl.from(adContainer + ' .cta', 2, { alpha: 0 });
+        }
+
+
         if (adImages['rotateImg']) {
             tl.from(adContainer + ' .rotateImg', 5, { x: 400, alpha: 1, rotation: 360 });
         }
+
+        
 
         const scene = new ScrollMagic.Scene({
             triggerElement: adContainer,

@@ -13,8 +13,8 @@ var config = {
         "url":"https://www.taylormadegolf.com/",
         "copy": "Buy Now",
         "color": "#fff",
-        "bgColor": "#111111",
-        "top": "365px",
+        "bgColor": "rgb(2, 145, 205)",
+        "top": "505px",
         "left": "135px"
     },
     "images" : {
