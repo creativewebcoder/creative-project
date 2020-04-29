@@ -106,8 +106,8 @@ section .image-placeholder {
 }
 .content {
     margin: 0 auto;
-    background: #ffffff;
     width: 1058px;
+    background: #ffffff;
 }
 .ad-placeholder-wrapper {
     overflow: hidden;
@@ -318,13 +318,13 @@ section .header-text-box {
     padding: 0;
     overflow: hidden;
 }
-#main-ad {
+#main-banner {
     margin: 10px 0px;
     border: 0;
     padding: 0;
     display: flex;
 }
-.bannerContainer #main-ad > div {
+.bannerContainer #main-banner div {
     position: absolute;
     padding: 0;
     margin: 0;
@@ -381,7 +381,6 @@ section .header-text-box {
     top: unset;
     width: 100%;
     display: flex;
-    z-index: 9;
 }
 .bannerContainer .rotateLine {
     height: 20px;
@@ -427,72 +426,7 @@ section .header-text-box {
     width: 100%;
 }
 
-.bannerContainer .hotspots {
-   width: 320px;
-   height: 150px;
-   /* margin: 0 auto; */
-   background-color: yellow;
-   top: 200px;
-   left: 25px;
-   right: 25px;
-   bottom: 0;
-   z-index: 999;
-   overflow: hidden;
-   color: white;
-}
 
-.bannerContainer .hotspots .hotspotsImg img {
-   width: 100%;
-   height: auto;
-}
-
-.bannerContainer .hotspots .hotspotsPoint {
-   width: 10px;
-   height: 10px;
-   cursor: pointer;
-   background-color: yellowgreen;
-   border: 5px solid red;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   border-radius: 50%;
-   z-index: 9;
-}
-.bannerContainer .hotspots .hotspotsMsg {
-   width: 95%;
-    height: 40px;
-    font-size: 12px;
-   cursor: pointer;
-   background-color: rgba(66, 68, 80, 0.8);
-   border-top: 2px solid #222;
-   position: absolute;
-   padding: 3px 7px;
-   overflow: hidden;
-   /* top: 0; */
-   left: 0;
-   right: 0;
-   bottom: 0px;
-   z-index: 9;
-   display: none;
-}
-
-.bannerContainer .hotspots .hotspotsMsg .hotspotsTitle {
-    font-weight: bold;
-    color: yellow;
-    margin-bottom: 2px;
-}
-
-.bannerContainer a.cta {
-    position: absolute;
-    padding: 10px 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 5px;
-    color: white;
-    background-color: black;
-}
 
 
 @media screen and (max-width: 992px) {
@@ -650,10 +584,25 @@ main section .text-placeholder {
 
 
             
-            <div class="bannerContainer">
-               <div class="ad-header">Adevertisement</div>
-               <div id="main-ad"></div>
-               <div class="ad-fotter">Scroll to continue with content</div>
+            <div class="">
+              
+               <div class="bannerContainer adBg">
+                  <div class="ad-header">Adevertisement</div>
+                  <div id="main-banner">
+                     <div class="logo"></div>
+                     <div class="copy1"></div>
+                     <div class="copy2"></div>
+                     <div class="video"></div>
+                     <div class="products "></div>
+
+                     <div class="button"></div>
+                     <div class="rotateContainer">
+                        <div class="rotateLine"></div>
+                     </div>
+                  </div>
+            <div class="ad-fotter">Scroll to continue with content</div>
+        </div>
+               
             </div>
             
          </section>
