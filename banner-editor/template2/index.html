@@ -445,13 +445,20 @@ section .header-text-box {
    width: 100%;
    height: auto;
 }
-
+@keyframes blinking {
+        0%, 100%{
+         background-color: rgba(153, 205, 50, 0.5);
+        }
+        50%{
+         background-color: rgba(153, 205, 50, 1);
+        }
+      }
 .bannerContainer .hotspots .hotspotsPoint {
    width: 10px;
    height: 10px;
    cursor: pointer;
    background-color: yellowgreen;
-   border: 5px solid red;
+   border: 3px solid red;
    position: absolute;
    top: 0;
    left: 0;
@@ -459,6 +466,11 @@ section .header-text-box {
    bottom: 0;
    border-radius: 50%;
    z-index: 9;
+   animation: blinking 2s infinite;
+}
+.bannerContainer .hotspots .hotspotsPoint:hover {
+   background-color: red;
+   animation: none;
 }
 .bannerContainer .hotspots .hotspotsMsg {
    width: 95%;
