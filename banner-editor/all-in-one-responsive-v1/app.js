@@ -8,6 +8,7 @@
 // });
 
 console.log(config)
+const controller = new ScrollMagic.Controller();
 
 $(document).ready(function () {
     if (config['adType'] == 'static') {
@@ -17,6 +18,41 @@ $(document).ready(function () {
     }
 });
 
+function getOrientation(){
+    let orientation = 'landscape';
+    if(window.innerHeight > window.innerWidth){
+        orientation = 'portrait';
+    }
+    return orientation;
+}
+
+window.addEventListener('resize', reportWindowSize);
+function reportWindowSize(){
+    // controller.destroy();
+    // controller = null;
+    //let parentWrapper = $('.bannerContainer').parents('.scrollmagic-pin-spacer');
+    //parentWrapper.after('<div class="bannerContainer"></div>');
+    //parentWrapper.remove();
+    config['scrollMagicActive'] = false;
+    if (config['adType'] == 'static') {
+        createStaticAd();
+    } else {
+        createDaynamicAd();
+    }
+    
+
+}
+
+// $( window ).on( "orientationchange", function( event ) {
+//     console.log('orientationchange')
+    
+//     //
+//     //controller.destroy();
+// 	// controller = null;
+
+
+    
+// });
 
 function scrollDirectionFn() {
     var lastScrollTop = 0;
@@ -43,16 +79,26 @@ function scrollDirectionFn() {
 function createStaticAd() {
     if (config) {
         let adData = config;
-        let adContainer = $(adData.adContainer + ' #main-ad');
+        let adContainer = $(adData.adContainer);
         let adContainerWidth = adData.adSize.width;
         let adContainerHeight = adData.adSize.height;
-        let adImages = adData.images;
-
+        // orientation
+        var orientation = getOrientation();
+        let adImages = adData[orientation].images;
+        
+        
         // set ad width and height
-        $(adData.adContainer).width(adContainerWidth);
-        $(adData.adContainer).height(adContainerHeight);
+        //$(adData.adContainer).width(adContainerWidth);
+        //$(adData.adContainer).height(adContainerHeight);
         adContainer.width(adContainerWidth);
         adContainer.height(adContainerHeight);
+        adContainer.html('');
+        
+
+        if(adData['isShowAdBar']){
+            let adBar = '<div class="ad-header">Adevertisement</div><div class="ad-fotter">Scroll to continue with content</div>';           
+            adContainer.append(adBar);
+        }
 
         // set ad background image
         if (adImages['bgImg']) {
@@ -62,7 +108,7 @@ function createStaticAd() {
             adContainer.append('<img class="staticImg" src="' + adImages['bgImg'] + '" />');
         }
 
-        if (adData['cta']) {
+        if (adData['cta'] && adData['cta']['isCtaShow']) {
             let ctaData = adData['cta'];
 
 
@@ -93,23 +139,19 @@ function createStaticAd() {
                 ctaHtml += '</a>';
                 adContainer.append(ctaHtml);
             } else {
-                console.log('cta add')
                 let ctaHtml = '<a class="fullAdCta" target="_blank" ';
-
                 if (ctaData['url']) {
                     ctaHtml += ` href="${ctaData['url']}" >&nbsp;`;
                 }
-
                 ctaHtml += '</a>';
                 adContainer.append(ctaHtml);
-
             }
         }
 
 
 
-        const controller = new ScrollMagic.Controller();
-
+        
+        if(adData['scrollMagicActive']){
         var tl = new TimelineMax();
 
         const scene = new ScrollMagic.Scene({
@@ -124,6 +166,7 @@ function createStaticAd() {
             .addTo(controller);
 
            // scrollDirectionFn();
+    }
 
     }
 }
@@ -140,7 +183,7 @@ function initScrollMagic() {
         let adCopyArray = adData.copy;
         let adVideoSettings = adData.video;
 
-        const controller = new ScrollMagic.Controller();
+        
 
         var tl = new TimelineMax({ onUpdate: updatePercentage });
 
@@ -207,31 +250,11 @@ function initScrollMagic() {
 
         function updatePercentage() {
             tl.progress();
-            //console.log(tl.progress());
             if (adVideoSettings) {
                 stopAdFn();
             }
         }
-
-        // scene.on("start", function (event) {
-        //     console.log("Hit start point of scene.");
-        //     videoPlayFn()
-        // });
-
-        // scene.on("end", function (event) {
-        //     console.log("Hit end point of scene.");
-        //     stopAdFn();
-        // });
-
-        // scene.on("leave", function (event) {
-        //     console.log("Scene left.");
-        //     stopAdFn();
-        // });
-
-        // scene.on("shift", function (event) {
-        //     console.log("Scene moved, because the " + event.reason + " has changed.)");
-        // });
-
+     
         function isHidden(el) {
             var style = window.getComputedStyle(el);
             return parseInt(style.opacity);
@@ -242,10 +265,8 @@ function initScrollMagic() {
             var bannerVideo = document.querySelector(".bannerContainer video");
             if (parseInt(videoContainer.style.opacity) < 1) {
                 bannerVideo.pause();
-                console.log('video pause');
             } else {
                 if (bannerVideo.paused) {
-                    console.log('video auto play');
                     bannerVideo.currentTime = 0;
                     bannerVideo.play();
                     if (document.querySelector(".bannerContainer .playIcon")) {
@@ -254,20 +275,6 @@ function initScrollMagic() {
                 }
             }
         }
-
-
-        // function videoPlayFn(){
-        //     var bannerVideo = document.querySelector(".bannerContainer video"); 
-        //     console.log('video auto play');
-        //     // bannerVideo.setAttribute('controls','');
-        //    // bannerVideo.muted = true;
-        //     bannerVideo.currentTime = 0;
-        //     bannerVideo.play();
-        //     if(document.querySelector(".bannerContainer .playIcon")){
-        //         document.querySelector(".bannerContainer .playIcon").remove();    
-        //     }
-
-        // }
     }
 }
 

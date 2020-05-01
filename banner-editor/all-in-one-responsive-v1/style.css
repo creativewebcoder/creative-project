@@ -47,7 +47,7 @@
     display: flex;
 }
 
-.bannerContainer #main-ad>div {
+.bannerContainer > * {
     position: absolute;
     padding: 0;
     margin: 0;
