@@ -16,20 +16,9 @@ var config = {
         "top": "365px",
         "left": "135px"
     },
-    "landscape" : {
-        "images" : {
-            // "bgImg": "./images/static/Parallax_414x736.jpg"          
-            "bgImg": "./images/static/Parallax_736x414.jpg"          
-        }  
+    "images" : {
+        "bgImg": "./images/Parallax_1280x800.jpg"          
     },
-
-    "portrait" : {
-        "images" : {
-            "bgImg": "./images/static/Parallax_414x736.jpg"          
-            // "bgImg": "./images/static/Parallax_736x414.jpg"          
-        }  
-    },
-
-    "scrollMagicActive": true, // true, false
-    "isShowAdBar": true // true, false
+    
+    "isShowAdBar": true, // true, false
 }

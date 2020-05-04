@@ -1,0 +1,501 @@
+.ad-header {
+    background: rgb(0, 0, 0, 1);
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.ad-fotter {
+    overflow: hidden;
+    background: rgb(0, 0, 0, 1);
+    z-index: 99;
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.bannerContainer {
+    border: 1px solid #222;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ 
+
+.bannerContainer > div {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.bannerContainer .logo {
+    padding: 20px 0 0 30%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #00c2ff;
+    
+
+}
+.bannerContainer .copyWrapper {
+    width: 100%;
+    background-color: #202020;
+    padding: 10px;
+    left: 0;
+    top: 120px;
+    right: 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bannerContainer .copy1 {
+    color: white;    
+    margin: 0 5px;
+    /* width: 49%; */
+    /* display: flex; */
+}
+
+.bannerContainer .copy2 {
+    color: #00c2ff;
+    margin: 0 5px;
+    /* width: 49%; */
+    /* display: flex; */
+}
+
+.bannerContainer .video {
+    top: 25%;
+    left: 2%;
+    width: 45%;
+}
+
+.bannerContainer .rotateContainer {
+    bottom: 0;
+    top: unset;
+    width: 100%;
+    display: flex;
+    z-index: 9;
+}
+
+.bannerContainer .playIcon {
+    position: absolute;
+    top: 26%;
+    left: 37%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.bannerContainer .products {
+    bottom: 27%;
+    height: 450px;
+    top: unset;
+    left: 50%;
+    width: 60%;
+}
+
+.bannerContainer .products img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.bannerContainer .products .product1 {
+    left: 0;
+    
+}
+
+.bannerContainer .products .product2 {
+    left: 25%;
+}
+
+.bannerContainer .products .product3 {
+    left: 50%;
+}
+
+
+.bannerContainer .hotspots {
+    width: 320px;
+    height: 150px;
+    /* margin: 0 auto; */
+    background-color: yellow;
+    top: 200px;
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+    color: white;
+}
+
+.bannerContainer .hotspots .hotspotsImg img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes blinking {
+
+    0%,
+    100% {
+        background-color: rgba(153, 205, 50, 0.5);
+    }
+
+    50% {
+        background-color: rgba(153, 205, 50, 1);
+    }
+}
+
+.bannerContainer .hotspots .hotspotsPoint {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: yellowgreen;
+    border: 3px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 9;
+    animation: blinking 2s infinite;
+}
+
+.bannerContainer .hotspots .hotspotsPoint:hover {
+    background-color: red;
+    animation: none;
+}
+
+.bannerContainer .hotspots .hotspotsMsg {
+    width: 95%;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: rgba(66, 68, 80, 0.8);
+    border-top: 2px solid #222;
+    position: absolute;
+    padding: 3px 7px;
+    overflow: hidden;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: 9;
+    display: none;
+}
+
+.bannerContainer .hotspots .hotspotsMsg .hotspotsTitle {
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 2px;
+}
+
+.bannerContainer a.cta {
+    position: absolute;
+    padding: 10px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    font-size: 35px;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 1px #414040;
+    border: 1px solid white;
+    top: 60%;
+    left: 15%;
+    text-shadow: 0px 0px 7px #000;
+}
+
+.bannerContainer a.fullAdCta {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: block;
+    /* background-color: rgba(255, 0, 0, 0.281); */
+}
+
+
+.bannerContainer .staticImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/************ Static Banner CSS Start ************/
+.bannerContainer.static  {
+    background-image: url(./images/Parallax_1280x800.jpg);
+    background-attachment: fixed;
+    background-position: 0;
+    background-size: cover;
+}
+
+@media screen and (max-device-width: 1024px) {
+    .bannerContainer.static .staticImg {
+        display: none !important;
+    }
+}
+
+
+/* 768x1024 */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .bannerContainer.static  {
+        background-image: url(./images/Parallax_768x1024.jpg);
+    }    
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .bannerContainer.static  {
+        background-image: url(./images/Parallax_1024x768.jpg);
+    }
+}
+
+/* 414x767 */
+@media screen and  (max-device-width: 767px) and (orientation:portrait) {
+    .bannerContainer.static  {
+        background-image: url(./images/Parallax_414x736.jpg);
+    }    
+}
+
+@media screen and  (max-device-width: 767px) and (orientation:landscape) {
+    .bannerContainer.static  {
+        background-image: url(./images/Parallax_736x414.jpg);
+    }
+}
+/************ Static Banner CSS End ************/
+
+/************ Video Banner CSS Start ************/
+/* .bannerContainer.video  {
+    
+} */
+
+@media screen and (max-device-width: 1024px) {
+    .bannerContainer.static .staticImg {
+        display: none !important;
+    }
+}
+
+@media screen and (min-device-width: 1025px) {
+    .bannerContainer .logo {
+        height: 15%;
+    }
+}
+
+
+@media screen and (max-device-width: 1024px)  and (orientation:portrait) {
+
+    .bannerContainer .logo {
+        padding: 16px 0 0 25%;
+    }
+    .bannerContainer .copy1, .bannerContainer .copy2 {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+
+    .bannerContainer .video {
+        width: 64%;
+        left: 19%;      
+    }
+
+    .bannerContainer a.cta {
+        top: 55%;
+        left: 30%;
+    }
+
+    .bannerContainer .products {
+        bottom: -65px;
+        height: 450px;
+        top: unset;
+        left: 15%;
+        width: 100%;
+    }
+
+    
+}
+
+
+
+/* 768x1024 */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+       
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+    
+    .bannerContainer a.cta {
+        top: 65%;
+        left: 12%;
+    }
+
+    .bannerContainer .video {
+        width: 39%;
+    }
+}
+
+/* 414x767 */
+@media screen and  (max-device-width: 767px) and (orientation:portrait) {
+    .bannerContainer .logo  {
+        padding: 15px;
+        width: 95%;
+    }    
+    .bannerContainer .logo img {
+        width: 100%;
+    }
+
+    .bannerContainer .copyWrapper {
+        font-size: 32px;
+    }
+
+    .bannerContainer .video {
+        width: 80%;
+        left: 10%;   
+        top: 30%;   
+    }
+
+    .bannerContainer .products {
+        width: 100%;
+        left: 7%;
+        bottom: -75px;
+    }
+
+    .bannerContainer .products img {
+        width: 35%;
+    }
+
+    .bannerContainer a.cta {
+        left: 20%;
+        top: 58%;
+        font-size: 24px;
+    }
+
+    img.rotateImg {
+        width: 75px;
+    }
+}
+
+@media screen and  (max-device-width: 767px) and (orientation:landscape) {
+    .bannerContainer a.cta {
+        left: 15%;
+        top: 79%;
+        font-size: 18px;
+    }
+    .bannerContainer .logo img {                
+        width: 45%;        
+    }
+    .bannerContainer .copyWrapper {
+        font-size: 28px;
+        top: 75px;
+    }
+    .bannerContainer .video {
+        top: 32%;        
+    }
+
+    .bannerContainer .products {
+        bottom: -25px;
+        height: 450px;
+        left: 51%;
+    }
+
+    .bannerContainer .products img {
+        width: 30%;
+    }
+
+    img.rotateImg {
+        width: 55px;
+    }
+}
+
+@media screen and  (max-device-width: 667px) and (orientation:landscape) {
+    .bannerContainer .copyWrapper {
+        font-size: 22px;
+        top: 19.5%;
+    }
+
+    .bannerContainer .video {
+        top: 35%;
+        width: 40%;
+    }
+
+    .bannerContainer a.cta {
+        padding: 10px 40px;
+    }
+}
+
+@media screen and  (max-device-width: 667px) and (orientation:portrait) {
+    .bannerContainer .logo  {
+        padding: 15px 6%;
+        width: 95%;
+        height: 15%;
+    }    
+    .bannerContainer .logo img {
+        width: 95%;
+    }
+
+    .bannerContainer .copyWrapper {
+        font-size: 24px;
+        top: 15%;
+    }
+
+    .bannerContainer .video {
+        width: 80%;
+        left: 10%;   
+        top: 30%;   
+    }
+
+    .bannerContainer .products {
+        width: 100%;
+        left: 7%;
+        bottom: -75px;
+    }
+
+    .bannerContainer .products img {
+        width: 35%;
+    }
+
+    .bannerContainer a.cta {
+        left: 25%;
+        top: 58%;
+        font-size: 24px;
+    }
+
+    img.rotateImg {
+        width: 75px;
+    }
+}
+
+
+/************ Static Banner CSS End ************/
