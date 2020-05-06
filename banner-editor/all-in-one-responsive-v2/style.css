@@ -86,7 +86,7 @@
     /* display: flex; */
 }
 
-.bannerContainer .video {
+.bannerContainer .hotspots, .bannerContainer .video {
     top: 25%;
     left: 2%;
     width: 45%;
@@ -109,7 +109,7 @@
 }
 
 .bannerContainer .products {
-    bottom: 27%;
+    bottom: 0;
     height: 450px;
     top: unset;
     left: 50%;
@@ -136,10 +136,9 @@
 }
 
 
-.bannerContainer .hotspots {
+/* .bannerContainer .hotspots {
     width: 320px;
     height: 150px;
-    /* margin: 0 auto; */
     background-color: yellow;
     top: 200px;
     left: 25px;
@@ -148,8 +147,11 @@
     z-index: 999;
     overflow: hidden;
     color: white;
-}
+} */
 
+.bannerContainer .hotspots { 
+    overflow: hidden;
+}
 .bannerContainer .hotspots .hotspotsImg img {
     width: 100%;
     height: auto;
@@ -189,19 +191,20 @@
 }
 
 .bannerContainer .hotspots .hotspotsMsg {
-    width: 95%;
+    width: 100%;
     height: 40px;
     font-size: 12px;
     cursor: pointer;
     background-color: rgba(66, 68, 80, 0.8);
     border-top: 2px solid #222;
+    color: #fff;
     position: absolute;
     padding: 3px 7px;
     overflow: hidden;
     /* top: 0; */
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 5px;
     z-index: 9;
     display: none;
 }
@@ -314,6 +317,24 @@
     }
 }
 
+@media screen and (min-device-width: 1025px) {
+    .bannerContainer .logo {
+        height: 15%;
+    }
+
+    .bannerContainer .copyWrapper {
+        top: 16%;
+    }
+
+    .bannerContainer .hotspots, .bannerContainer .video {
+        top: 30%;
+    }
+    
+    .bannerContainer a.cta {
+        top: 72%;
+    }
+}
+
 
 @media screen and (max-device-width: 1024px)  and (orientation:portrait) {
 
@@ -326,7 +347,7 @@
         width: 100%;
     }
 
-    .bannerContainer .video {
+    .bannerContainer .hotspots, .bannerContainer .video {
         width: 64%;
         left: 19%;      
     }
@@ -361,7 +382,12 @@
         left: 12%;
     }
 
-    .bannerContainer .video {
+    .bannerContainer .logo {
+        height: 120px;
+    }
+
+    .bannerContainer .hotspots, .bannerContainer .video {
+        top: 30%;
         width: 39%;
     }
 }
@@ -380,7 +406,7 @@
         font-size: 32px;
     }
 
-    .bannerContainer .video {
+    .bannerContainer .hotspots, .bannerContainer .video {
         width: 80%;
         left: 10%;   
         top: 30%;   
@@ -420,7 +446,7 @@
         font-size: 28px;
         top: 75px;
     }
-    .bannerContainer .video {
+    .bannerContainer .hotspots, .bannerContainer .video {
         top: 32%;        
     }
 
@@ -445,7 +471,7 @@
         top: 19.5%;
     }
 
-    .bannerContainer .video {
+    .bannerContainer .hotspots, .bannerContainer .video {
         top: 35%;
         width: 40%;
     }
@@ -470,7 +496,7 @@
         top: 15%;
     }
 
-    .bannerContainer .video {
+    .bannerContainer .hotspots, .bannerContainer .video {
         width: 80%;
         left: 10%;   
         top: 30%;   
