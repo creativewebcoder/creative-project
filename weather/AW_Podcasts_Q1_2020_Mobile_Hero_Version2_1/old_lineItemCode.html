@@ -1,0 +1,58 @@
+<img src="%i" height="1" width="1" border="0" />
+
+<script>
+    var css = "@media(min-width: 421px){#primoFC{display:none}}#primoFC #creativeBG{position:relative}#primoFC #creativeBG:hover{cursor:pointer}@media(max-width:420px){#primoFC{margin-bottom:10px;margin-top:-12px;height:250px;background:#ebeae2;overflow:hidden}#creativeBG{}#creativeBG .copy{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/copy.png) no-repeat;width:163px;height:134px;position:absolute;left:20px;top:20px}#creativeBG .phone{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/phone.png) no-repeat;width:150px;height:236px;position:absolute;right:0px;top:20px}#creativeBG .bottom{height:70px;position:absolute;background:#ed4747;top:180px;left:0px;width:100%}#creativeBG .bottom .left{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/grubhub_logo.png) no-repeat;width:90px;height:34px;position:absolute;left:20px;bottom:15px;-webkit-animation:fadeIn 1s 1s both;animation:fadeIn 1s 1s both;opacity:0}#creativeBG .bottom .right{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/right_logo.png) no-repeat;width:142px;height:65px;position:absolute;right:20px;bottom:0px;-webkit-animation:fadeIn 1s 2s both;animation:fadeIn 1s 2s both;opacity:0}}@media(max-width:375px){#primoFC{margin-bottom:10px;margin-top:-12px;height:250px;background:#ebeae2;overflow:hidden}}@media(max-width:360px){#primoFC #creativeBG{background-size:contain;width:100%;top:0px}}@media(max-width:320px){#primoFC #creativeBG{width:100%;background-size:contain;top:0px}}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}",
+        head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+        style = parent.document.createElement('style');
+
+    head.appendChild(style);
+
+    style.type = 'text/css';
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+
+    var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/copy.png';
+    allBannerImages[1] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/grubhub_logo.png';
+    allBannerImages[2] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/phone.png';
+    allBannerImages[3] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v1/right_logo.png';
+
+    allBannerImages.forEach(function (imgSrc) {
+        var newImgTag = parent.document.createElement('img');
+        newImgTag.src = imgSrc;
+        newImgTag.addEventListener('load', function () {
+            newImgTag.remove();
+            uploadImagesCount++;
+
+            if (allBannerImages.length == uploadImagesCount) {
+
+                var node = parent.document.querySelector(".nfl-page-subheader"),
+                    ele = document.createElement("div");
+                ele.className = "banner-item";
+                ele.innerHTML = "<div id='primoFC'><div id='creativeBG'><div class='copy'></div><div class='phone'></div><div class='bottom'><div class='left'></div><div class='right'></div></div></div></div>";
+                node.parentNode.insertBefore(ele, node.nextSibling);
+
+
+                var Click_URL = 'http://www.google.com';
+                var ClickTag = parent.document.getElementById('primoFC');
+
+                try {
+                    ClickTag.onclick = function () {
+                        window.open(Click_URL, '_blank');
+                    };
+                } catch (error) {
+                    console.log('click not working');
+                }
+
+
+
+                var elem = parent.document.getElementById('top-1');
+                if (elem) { elem.parentNode.removeChild(elem); }
+            }
+        });
+    });
+
+</script>

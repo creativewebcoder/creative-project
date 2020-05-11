@@ -1,0 +1,427 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+#CLICK {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    display: block;
+    z-index: 1;
+    cursor: pointer
+}
+#creativeBG {
+    width: 100%;
+    height: 300px;
+    margin-top: -24px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background: #003332;
+    position: relative;
+
+}
+
+#creativeBG div {
+    background-repeat: no-repeat
+}
+#bannerWrapper {
+    background: #fff;
+    width: 100%;
+    height: 300px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+#bannerContent {
+    width: 960px;
+    height: 300px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-480px);
+        -ms-transform: translateX(-480px);
+            transform: translateX(-480px);
+    position: absolute;
+    z-index:1;
+}
+.video_player, .left_logo, .right_logo, .frameCopy {
+    z-index:5;
+}
+.video_player {
+    width: 356px;
+    height:201px;
+    top: 30px;
+    left:45px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/Desktop_video_player.png) no-repeat;
+    position: absolute;
+}
+.left_logo {
+    width:89px;
+    height:18px;
+    bottom: 30px;
+    left:45px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/left_logo.png) no-repeat;
+    position: absolute;
+}
+.right_logo {
+    width:161px;
+    height:37px;
+    bottom: 30px;
+    right:22px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/right_logo.png) no-repeat;
+    position: absolute;
+}
+.right_logo, .left_logo {
+    -webkit-animation: fadein 2.0s 4.0s both;
+            animation: fadein 2.0s 4.0s both;
+    opacity:0;
+}
+.frameCopy1 {
+    width:252px;
+    height:51px;
+    top: 30px;
+    right:15%;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/copy1.png) no-repeat;
+    position: absolute;	
+    -webkit-animation: fadein 0.0s 4.0s both;	
+            animation: fadein 0.0s 4.0s both;
+    opacity:0;			
+}
+.frameCopy2 {
+    width:251px;
+    height:79px;
+    top:88px;
+    right:15%;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/copy2.png) no-repeat;
+    position: absolute;
+    -webkit-animation: fadein 0.0s 5.0s both;
+            animation: fadein 0.0s 5.0s both;
+    opacity:0;			
+}		
+.innerbg {
+    width:960px;
+    height:400px;
+    bottom:-265px;
+    left:0px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG.png) no-repeat;
+    position: absolute;
+    z-index:0;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-animation: zoominInnurbg 2.0s 2.0s both;
+            animation: zoominInnurbg 2.0s 2.0s both;
+}	
+.sun {
+    position:relative;
+    margin:0 auto;
+    width: 175px;
+    height: 175px;
+    background: #f37c21;
+    border-radius: 50%;
+    bottom:-230px;
+    -webkit-animation: zoomInAnim 2.5s 0.5s both;
+            animation: zoomInAnim 2.5s 0.5s both;
+}
+@media screen and (max-width: 992px) {           
+
+    #bannerWrapper {
+        background: #fff;
+    }
+    #bannerContent {
+        width: 748px;
+        height: 300px;
+        -webkit-transform: translateX(-374px);
+            -ms-transform: translateX(-374px);
+                transform: translateX(-374px)
+    }           
+}
+
+@media screen and (max-width: 768px) {
+#creativeBG .innerbg {
+    width:720px;
+    height:336px;
+    bottom:0px;
+    left:-10px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG_ipad.png) no-repeat;
+    -webkit-animation: zoominInnurbgiPad 2.0s 2.0s both;
+            animation: zoominInnurbgiPad 2.0s 2.0s both;
+    
+}
+#creativeBG .video_player {
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/iPad_video_player.png) no-repeat;
+    width:338px;
+    height:191px;
+    left:15px;
+}				
+}
+
+
+@media screen and (max-width:767px) {
+#creativeBG{
+    height:250px;
+}
+#creativeBG .sun {
+    bottom:-175px;
+    -webkit-animation: zoomInAnimMweb 2.5s 0.5s both;
+            animation: zoomInAnimMweb 2.5s 0.5s both;
+}
+#creativeBG .video_player {
+    left:130px;
+    top: 60px;
+    position:relative;
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+}
+#creativeBG .right_logo {
+    top: 15px;
+    left: 182px;
+    position: absolute;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+#creativeBG .left_logo {
+    top: 15px;
+    left: 473px;
+    position: absolute;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+}
+#creativeBG .frameCopy1 { 
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/mWeb_copy1.png) no-repeat;
+    width: 125px;
+    height: 32px;
+    position: absolute;
+    right: 208px;
+    top: 80px;
+}
+#creativeBG .frameCopy2 { 
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/mWeb_copy2.png) no-repeat;
+    width: 126px;
+    height: 67px;
+    position: absolute;
+    right: 208px;
+    top:116px;
+}
+#creativeBG .innerbg {
+    bottom: -138px;
+    width: 445px;
+    height:200px;
+    position: relative;
+    left: 108px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG_mWeb.png) no-repeat;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-animation: zoominInnurbgmWeb 2.0s 2.0s both;
+            animation: zoominInnurbgmWeb 2.0s 2.0s both;
+}
+}
+@media screen and (max-width:375px) {
+    #creativeBG .innerbg {
+    left: 185px;
+}
+}
+@media screen and (max-width:360px) {
+#creativeBG .left_logo {
+    left: 468px;
+}
+#creativeBG .right_logo {
+    left: 190px;
+}
+#creativeBG .video_player {
+    left: 121px;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+}
+#creativeBG .innerbg {
+    left: 188px;
+}
+}
+@media screen and (max-width:320px) {
+#creativeBG .left_logo {
+    left: 446px;
+}
+#creativeBG .right_logo {
+    left: 210px;
+}
+#creativeBG .video_player {
+    left: 125px;
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4);
+}
+#creativeBG .innerbg {
+    left: 173px;
+}
+#creativeBG .frameCopy1 {
+    right: 226px;
+    }
+#creativeBG .frameCopy2 {
+right: 225px;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes zoomInAnim {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(15);
+                transform: scale(15);
+    }
+}
+
+@keyframes zoomInAnim {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(15);
+                transform: scale(15);
+    }
+}
+@-webkit-keyframes zoomInAnimMweb {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(6);
+                transform: scale(6);
+    }
+}
+@keyframes zoomInAnimMweb {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(6);
+                transform: scale(6);
+    }
+}
+@-webkit-keyframes zoominInnurbg {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-265px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:0px;
+        left:-70px;
+    }
+}
+@keyframes zoominInnurbg {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-265px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:0px;
+        left:-70px;
+    }
+}
+@-webkit-keyframes zoominInnurbgiPad {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-165px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:-15px;
+        left:-50px;
+    }
+}
+@keyframes zoominInnurbgiPad {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-165px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:-15px;
+        left:-50px;
+    }
+}
+@-webkit-keyframes zoominInnurbgmWeb {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-0px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:140px;
+        left:120px;
+    }
+}
+@keyframes zoominInnurbgmWeb {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        bottom:-0px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        bottom:140px;
+        left:120px;
+    }
+}	
+
+

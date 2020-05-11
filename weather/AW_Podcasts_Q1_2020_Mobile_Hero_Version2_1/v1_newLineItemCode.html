@@ -1,0 +1,71 @@
+<img src="%i" height="1" width="1" border="0" />
+
+<script>
+    var css = "@media(min-width: 421px){#primoFC{display:none}}#primoFC #creativeBG{position:relative}#primoFC #creativeBG:hover{cursor:pointer}@media(max-width:420px){#primoFC{margin-bottom:10px;margin-top:-12px;height:250px;background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/brand_bg.png) no-repeat;background-position:right 2px;overflow:hidden}#creativeBG .copy{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/content.png) no-repeat;width:201px;height:134px;position:absolute;left:15px;top:20px}#creativeBG .phone{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/phone.png) no-repeat;width:150px;height:236px;position:absolute;right:0px;top:20px}#creativeBG .bottom{height:66px;position:absolute;background:#fff;top:184px;left:0px;right:0px;width:100%;border:2px solid #f432a1;overflow:hidden}#creativeBG .bottom .frame1And2{width:100%;height:69px;position:absolute;left:0px;bottom:0px;animation:fadeOut 1.0s 8.0s both}#creativeBG .bottom .frame1And2 .copy1_frm1{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/cp1_frm1.png) no-repeat;width:195px;height:28px;position:absolute;left:10px;bottom:19px;animation:fadeInAndOut 4.0s 1.0s both}#creativeBG .bottom .frame1And2 .copy2_frm2{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/cp2_frm2.png) no-repeat;width:166px;height:28px;position:absolute;left:10px;bottom:19px;animation:fadeInAndOut 4.0s 5.0s both}#creativeBG .bottom .frame1And2 .product_logo{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/product_logo.png) no-repeat;width:130px;height:51px;position:absolute;right:10px;bottom:6px}#creativeBG .bottom .finalFrame{width:100%;height:66px;position:absolute;right:0px;bottom:0px;animation:fadeIn 1.0s 9.0s both}#creativeBG .bottom .finalFrame .dunkin_logo2{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_logo2.png) no-repeat;width:127px;height:18px;position:absolute;left:10px;bottom:23px}#creativeBG .bottom .finalFrame .dunkin_product{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_product.png) no-repeat;width:100px;height:66px;position:absolute;left:53%;transform:translateX(-50%);bottom:0px}#creativeBG .bottom .finalFrame .dunkin_cta{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_cta.png) no-repeat;width:107px;height:24px;position:absolute;right:10px;bottom:21px}}@media(max-width:375px){#creativeBG .bottom .finalFrame .product_cta{right:11px}#creativeBG .bottom .finalFrame .dunkin_product{left:54%}}@media(max-width:360px){#creativeBG .bottom .finalFrame .product_cta{right:5px}#primoFC #creativeBG{background-size:contain;width:100%;top:0px}#creativeBG .copy{background:url(https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/content2.png) no-repeat;width:201px;height:134px;position:absolute;left:10px;top:20px}#creativeBG .bottom .frame1And2 .copy1_frm1, #creativeBG .bottom .frame1And2 .copy1_frm2{left:5px}#creativeBG .bottom .finalFrame .dunkin_logo2{left:8px}#creativeBG .bottom .finalFrame .dunkin_cta{right:8px}}@media(max-width:320px){#primoFC #creativeBG{width:100%;background-size:contain;top:0px}}@keyframes fadeInAndOut{0%{opacity:0}25%{opacity:1}75%{opacity:1}100%{opacity:0}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}",
+        head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+        style = parent.document.createElement('style');
+
+    head.appendChild(style);
+
+    style.type = 'text/css';
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+
+    var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/brand_bg.png';
+    allBannerImages[1] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/content.png';
+    allBannerImages[2] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/phone.png';
+    allBannerImages[3] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/cp1_frm1.png';
+    allBannerImages[4] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/cp2_frm2.png';
+    allBannerImages[5] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/product_logo.png';
+    allBannerImages[6] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_logo2.png';
+    allBannerImages[7] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_product.png';
+    allBannerImages[8] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/dunkin_cta.png';
+    allBannerImages[9] = 'https://creative.sebpo.com/accuweather/2020/AW_Podcasts_Q1_2020_April/Mobile_Hero/v3/version2_1/v2/content2.png';
+    
+    
+
+    allBannerImages.forEach(function (imgSrc) {
+        var newImgTag = parent.document.createElement('img');
+        newImgTag.src = imgSrc;
+        newImgTag.addEventListener('load', function () {
+            newImgTag.remove();
+            uploadImagesCount++;
+
+            if (allBannerImages.length == uploadImagesCount) {
+
+                var node = parent.document.querySelector(".nfl-page-subheader") || parent.document.querySelector(".page-subheader") ,
+                    ele = document.createElement("div");
+                ele.className = "banner-item";
+                ele.innerHTML = "<div id='primoFC'><div id='creativeBG'><div class='copy'></div><div class='phone'></div><div class='bottom'><div class='frame1And2'><div class='product_logo'></div><div class='copy1_frm1'></div><div class='copy2_frm2'></div></div><div class='finalFrame'><div class='dunkin_product'></div><div class='dunkin_logo2'></div><div class='dunkin_cta'></div></div></div></div></div>";
+                node.parentNode.insertBefore(ele, node.nextSibling);
+
+
+                setTimeout(function(){ 
+                    console.log('animation restart')
+                    node.parentNode.insertBefore(ele, node.nextSibling);
+                 }, 15000);
+
+                var Click_URL = 'http://www.google.com';
+                var ClickTag = parent.document.getElementById('primoFC');
+
+                try {
+                    ClickTag.onclick = function () {
+                        window.open(Click_URL, '_blank');
+                    };
+                } catch (error) {
+                    console.log('click not working');
+                }
+
+
+
+                var elem = parent.document.getElementById('top-1');
+                if (elem) { elem.parentNode.removeChild(elem); }
+            }
+        });
+    });
+
+</script>
