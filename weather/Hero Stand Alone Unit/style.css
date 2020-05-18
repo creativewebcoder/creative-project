@@ -1,0 +1,119 @@
+ 
+.banner-item {
+    margin-top: -24px;
+}
+
+#collapse {
+    display: block;
+    cursor: pointer;
+    
+}
+.collapsable {
+    width: 728px;
+    height: 90px;
+    overflow: hidden;
+    margin: 0 auto;  
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Hero_Stand_Alone_Unit/expandHero/v1/Best_Buy_Memorial_Day_MAPP_GE_728x90.png);
+    background-size: cover;  
+}
+.collapsable h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 25px 0;
+}
+.collapsable img {
+    width: 100%;
+    height: auto;
+}
+#expandable {
+    display: none;
+}
+#closeExpand {
+    position: absolute;
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    top: 16%;
+    right: 25%;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+
+
+#primoFC div.cityforecast {
+    width: 632px;
+    top: -15px;
+    z-index: 100;
+}
+
+#btm_bg {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 93px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+#primoFC {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Hero_Stand_Alone_Unit/expandHero/v1/desktop_1488x300_bg.png);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: -24px;
+    cursor: pointer;
+}
+
+#primoFC #creativeBG {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Hero_Stand_Alone_Unit/expandHero/v1/desktop_1488x300_content.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0px;
+    overflow-x: hidden;
+    z-index: 0;
+}
+
+#primoFC #creativeBG:hover {
+    cursor: pointer
+}
+
+#feed-tabs.panel-list.cityforecast {
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: 604px;
+    z-index: 10
+}
+
+#trending-now {
+    margin-top: 25px
+}
+
+@media(max-width:1366px) and (min-width:980px) {
+    #primoFC #creativeBG {
+        width: 960px;
+        height: 300px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Hero_Stand_Alone_Unit/expandHero/v1/desktop_1280x300_content.png)
+    }
+
+    #primoFC {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Hero_Stand_Alone_Unit/expandHero/v1/desktop_1280x300_bg.png)
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    #primoFC {
+        display: block;
+    }
+}

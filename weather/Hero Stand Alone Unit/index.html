@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="banner-item">
+            <div id="collapse">
+                <div class="collapsable"></div>
+            </div>
+            <div id="expandable">                
+                <div id="primoFC"><div id="creativeBG"></div></div>
+                <div id="closeExpand">X</div>
+            </div>            
+        </div>
+        
+        <script src="jquery-3.5.1.min.js" ></script>
+        <script>
+
+            $( "#collapse" ).click(function() {
+                $( "#collapse" ).slideUp( "fast", function() {
+                    $( "#expandable" ).slideDown( "slow");  
+                });
+                              
+            });
+            $( "#closeExpand" ).click(function() {
+                $( "#expandable" ).slideUp( "fast", function() {
+                    $( "#collapse" ).slideDown( "slow");  
+                });
+                          
+            });
+
+        </script>
+    </body>
+</html>

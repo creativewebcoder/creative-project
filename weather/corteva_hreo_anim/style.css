@@ -1,11 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-
 #CLICK {
     position: absolute;
     width: 100%;
@@ -20,7 +12,6 @@
     margin-top: -24px;
     margin-bottom: 50px;
     overflow: hidden;
-    background: #003332;
     position: relative;
 
 }
@@ -50,33 +41,34 @@
         -ms-transform: translateX(-480px);
             transform: translateX(-480px);
     position: absolute;
-    z-index:1;
 }
-.video_player, .left_logo, .right_logo, .frameCopy {
+/*.video_player, .left_logo, .right_logo, .frameCopy {
     z-index:5;
-}
+}*/
 .video_player {
     width: 356px;
     height:201px;
-    top: 30px;
-    left:45px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/Desktop_video_player.png) no-repeat;
     position: absolute;
+    top: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-480px);
+        -ms-transform: translateX(-480px);
+            transform: translateX(-480px);
 }
 .left_logo {
-    width:89px;
-    height:18px;
-    bottom: 30px;
-    left:45px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/left_logo.png) no-repeat;
+    width:142px;
+    height:28px;
+    bottom: 20px;
+    left:0px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/left_logo.png) no-repeat;
     position: absolute;
 }
 .right_logo {
-    width:161px;
-    height:37px;
-    bottom: 30px;
-    right:22px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/right_logo.png) no-repeat;
+    width:175px;
+    height:40px;
+    bottom: 20px;
+    right:0px;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/right_logo.png) no-repeat;
     position: absolute;
 }
 .right_logo, .left_logo {
@@ -89,7 +81,7 @@
     height:51px;
     top: 30px;
     right:15%;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/copy1.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/copy1.png) no-repeat;
     position: absolute;	
     -webkit-animation: fadein 0.0s 4.0s both;	
             animation: fadein 0.0s 4.0s both;
@@ -100,7 +92,7 @@
     height:79px;
     top:88px;
     right:15%;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/copy2.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/copy2.png) no-repeat;
     position: absolute;
     -webkit-animation: fadein 0.0s 5.0s both;
             animation: fadein 0.0s 5.0s both;
@@ -111,7 +103,7 @@
     height:400px;
     bottom:-265px;
     left:0px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/inner_BG.png) no-repeat;
     position: absolute;
     z-index:0;
     -webkit-transform: scale(0);
@@ -131,6 +123,26 @@
     -webkit-animation: zoomInAnim 2.5s 0.5s both;
             animation: zoomInAnim 2.5s 0.5s both;
 }
+
+#creativeBG .video_player .playBtn {    
+    width: 100%;
+    height: 100%;
+    z-index: 100 !important;
+    cursor: pointer;
+    opacity: 0.7;
+    position: absolute;
+}
+#creativeBG .video_player .playBtn img {
+    max-width: 80px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-40px, -40px);
+        -ms-transform: translate(-40px, -40px);
+            transform: translate(-40px, -40px);
+    margin: 0 auto !important;
+    position: absolute;
+}
+
 @media screen and (max-width: 992px) {           
 
     #bannerWrapper {
@@ -151,17 +163,25 @@
     height:336px;
     bottom:0px;
     left:-10px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG_ipad.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/inner_BG_ipad.png) no-repeat;
     -webkit-animation: zoominInnurbgiPad 2.0s 2.0s both;
             animation: zoominInnurbgiPad 2.0s 2.0s both;
     
 }
 #creativeBG .video_player {
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/iPad_video_player.png) no-repeat;
     width:338px;
     height:191px;
-    left:15px;
-}				
+    left: 50%;
+    -webkit-transform: translateX(-360px);
+        -ms-transform: translateX(-360px);
+            transform: translateX(-360px);
+}
+.left_logo,.right_logo{
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}	
+
 }
 
 
@@ -175,31 +195,39 @@
             animation: zoomInAnimMweb 2.5s 0.5s both;
 }
 #creativeBG .video_player {
-    left:130px;
-    top: 60px;
-    position:relative;
-    -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-            transform: scale(0.6);
+    width: 204px;
+    height: 115px;
+    top: 106px;
+    left: 12px;
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px);
+}
+#creativeBG .video_player .playBtn img {
+    -webkit-transform: translate(-40px, -40px) scale(.8);
+        -ms-transform: translate(-40px, -40px) scale(.8);
+            transform: translate(-40px, -40px) scale(.8);
 }
 #creativeBG .right_logo {
     top: 15px;
-    left: 182px;
+    right: unset;
+    left: 24%;
     position: absolute;
     -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-            transform: scale(0.8);
+            -ms-transform: scale(0.8);
+        transform: scale(0.8);
 }
 #creativeBG .left_logo {
     top: 15px;
-    left: 473px;
+    left: unset;
+    right: 23%;
     position: absolute;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+        transform: scale(0.5);
 }
 #creativeBG .frameCopy1 { 
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/mWeb_copy1.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/mWeb_copy1.png) no-repeat;
     width: 125px;
     height: 32px;
     position: absolute;
@@ -207,7 +235,7 @@
     top: 80px;
 }
 #creativeBG .frameCopy2 { 
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/mWeb_copy2.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/mWeb_copy2.png) no-repeat;
     width: 126px;
     height: 67px;
     position: absolute;
@@ -218,50 +246,45 @@
     bottom: -138px;
     width: 445px;
     height:200px;
-    position: relative;
     left: 108px;
-    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v1/inner_BG_mWeb.png) no-repeat;
+    background:url(https://creative.sebpo.com/accuweather/2020/Corteva/hero/v2/inner_BG_mWeb.png) no-repeat;
     -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
             transform: scale(0.7);
-    -webkit-animation: zoominInnurbgmWeb 2.0s 2.0s both;
-            animation: zoominInnurbgmWeb 2.0s 2.0s both;
-}
-}
-@media screen and (max-width:375px) {
-    #creativeBG .innerbg {
-    left: 185px;
+    -webkit-animation: zoominInnurbgmWeb 2.0s 2.0s  both;
+            animation: zoominInnurbgmWeb 2.0s 2.0s  both;
 }
 }
 @media screen and (max-width:360px) {
-#creativeBG .left_logo {
-    left: 468px;
-}
-#creativeBG .right_logo {
-    left: 190px;
-}
+
 #creativeBG .video_player {
-    left: 121px;
-    -webkit-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-            transform: scale(0.5);
+    width: 180px;
+    height: 101px;
+    top: 106px;
+    left: 12px;
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px);
+}
+#creativeBG .video_player .playBtn img {
+    -webkit-transform: translate(-40px, -40px) scale(.6);
+        -ms-transform: translate(-40px, -40px) scale(.6);
+            transform: translate(-40px, -40px) scale(.6);
 }
 #creativeBG .innerbg {
     left: 188px;
 }
 }
 @media screen and (max-width:320px) {
-#creativeBG .left_logo {
-    left: 446px;
-}
-#creativeBG .right_logo {
-    left: 210px;
-}
+
 #creativeBG .video_player {
-    left: 125px;
-    -webkit-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-            transform: scale(0.4);
+    width: 150px;
+    height: 85px;
+    top: 106px;
+    left: 10px;
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px);
 }
 #creativeBG .innerbg {
     left: 173px;
@@ -395,33 +418,51 @@ right: 225px;
         left:-50px;
     }
 }
-@-webkit-keyframes zoominInnurbgmWeb {
+@-ms-keyframes zoominInnurbgmWeb {
     from {
         -webkit-transform: scale(0);
+        -ms-transform: scale(0);
                 transform: scale(0);
-        bottom:-0px;
+        bottom:-100px;
     }
 
     to {
         -webkit-transform: scale(1);
+        -ms-transform: scale(1);
                 transform: scale(1);
-        bottom:140px;
+        bottom:40px;
+        left:120px;
+    }
+}
+@-webkit-keyframes zoominInnurbgmWeb {
+    from {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+                transform: scale(0);
+        bottom:-100px;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+                transform: scale(1);
+        bottom:40px;
         left:120px;
     }
 }
 @keyframes zoominInnurbgmWeb {
     from {
         -webkit-transform: scale(0);
+        -ms-transform: scale(0);
                 transform: scale(0);
-        bottom:-0px;
+        bottom:-100px;
     }
 
     to {
         -webkit-transform: scale(1);
+        -ms-transform: scale(1);
                 transform: scale(1);
-        bottom:140px;
+        bottom:40px;
         left:120px;
     }
 }	
-
-

@@ -1,0 +1,501 @@
+%%CLICK_URL_UNESC%%
+
+<script>
+    
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script);
+    
+    var script2 = document.createElement('script');
+    script2.type = 'text/javascript';
+    script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script2);
+    
+    var script3 = document.createElement('script');
+    script3.type = 'text/javascript';
+    script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script3);
+    
+    var script4 = document.createElement('script');
+    script4.type = 'text/javascript';
+    script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script4);
+    
+    var script5 = document.createElement('script');
+    script5.type = 'text/javascript';
+    script5.src = 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js';
+    parent.document.getElementsByTagName('head')[0].appendChild(script5);
+
+
+
+
+
+    /******** css insert start **********/
+    var css = ".ad-header{background:rgb(0, 0, 0, 1);color:#fff;padding:3px 0;text-align:center;text-transform:uppercase;font-size:11px;position:absolute;width:100%;top:0;left:0;right:0;overflow:hidden;z-index:99}.ad-fotter{overflow:hidden;background:rgb(0, 0, 0, 1);z-index:99;color:#fff;padding:3px 0;text-align:center;text-transform:uppercase;font-size:11px;position:absolute;width:100%;bottom:0;left:0;right:0}.bannerContainer{border:1px solid #222;margin:0 auto;padding:0;overflow:hidden;background-position:bottom;background-repeat:no-repeat;background-size:cover}.bannerContainer>div{position:absolute;padding:0;margin:0}.bannerContainer .logo{padding:20px 0 0 30%;width:100%;left:0;top:5%}.bannerContainer .copyWrapper{width:100%;padding:10px;left:0;top:120px;right:0;font-size:50px;font-weight:bold;text-align:center}.bannerContainer .copy1{color:#000;margin:0 5px}.bannerContainer .copy2{color:#000;margin:0 5px}.bannerContainer .hotspots, .bannerContainer .video{top:25%;left:2%;width:45%}.bannerContainer .rotateContainer{bottom:0;top:unset;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;z-index:9}.bannerContainer .playIcon{position:absolute;top:26%;left:37%;cursor:pointer;z-index:10}.bannerContainer .products{width:100%;left:0;bottom:0;height:100vh;top:0;position:absolute}.bannerContainer .products img{position:absolute}.bannerContainer .products .product1{left:0;width:100%;height:100vh;bottom:0}.bannerContainer .products .product2{left:0;bottom:0;width:100%}.bannerContainer .hotspots{overflow:hidden}.bannerContainer .hotspots .hotspotsImg img{width:100%;height:auto}@-webkit-keyframes blinking{0%,100%{background-color:rgba(153,205,50,0.5)}50%{background-color:rgba(153, 205, 50, 1)}}@keyframes blinking{0%,100%{background-color:rgba(153,205,50,0.5)}50%{background-color:rgba(153, 205, 50, 1)}}.bannerContainer .hotspots .hotspotsPoint{width:10px;height:10px;cursor:pointer;background-color:yellowgreen;border:3px solid red;position:absolute;top:0;left:0;right:0;bottom:0;border-radius:50%;z-index:9;-webkit-animation:blinking 2s infinite;animation:blinking 2s infinite}.bannerContainer .hotspots .hotspotsPoint:hover{background-color:red;-webkit-animation:none;animation:none}.bannerContainer .hotspots .hotspotsMsg{width:100%;height:40px;font-size:12px;cursor:pointer;background-color:rgba(66, 68, 80, 0.8);border-top:2px solid #222;color:#fff;position:absolute;padding:3px 7px;overflow:hidden;left:0;right:0;bottom:5px;z-index:9;display:none}.bannerContainer .hotspots .hotspotsMsg .hotspotsTitle{font-weight:bold;color:yellow;margin-bottom:2px}.bannerContainer a.cta{position:absolute;padding:10px 50px;text-decoration:none;text-transform:uppercase;border-radius:5px;font-size:35px;font-weight:bold;color:black;background-color:white;border:1px solid black;top:60%;left:15%}.bannerContainer a.fullAdCta{position:absolute;left:0;top:0;bottom:0;right:0;width:100%;height:100%;z-index:999;display:block}.bannerContainer .staticImg{position:absolute;left:0;top:0;bottom:0;right:0;width:100%;height:100%;display:block}.bannerContainer.static{background-image:url(./images/Parallax_1280x800.jpg);background-attachment:fixed;background-position:0;background-size:cover}@media screen and (max-device-width: 1024px){.bannerContainer.static .staticImg{display:none !important}}@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait){.bannerContainer.static{background-image:url(./images/Parallax_768x1024.jpg)}}@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape){.bannerContainer.static{background-image:url(./images/Parallax_1024x768.jpg)}}@media screen and (max-device-width: 767px) and (orientation:portrait){.bannerContainer.static{background-image:url(./images/Parallax_414x736.jpg)}}@media screen and (max-device-width: 767px) and (orientation:landscape){.bannerContainer.static{background-image:url(./images/Parallax_736x414.jpg)}}@media screen and (max-device-width: 1024px){.bannerContainer.static .staticImg{display:none !important}}@media screen and (min-device-width: 1025px){.bannerContainer .logo{height:15%}}@media screen and (min-device-width: 1025px){.bannerContainer .logo{height:15%}.bannerContainer .copyWrapper{top:16%}.bannerContainer .hotspots, .bannerContainer .video{top:30%}.bannerContainer a.cta{top:72%}}@media screen and (max-device-width: 1024px) and (orientation:portrait){.bannerContainer .logo{padding:16px 0 0 25%}.bannerContainer .copy1, .bannerContainer .copy2{margin:0 auto;display:block;width:100%}.bannerContainer .hotspots, .bannerContainer .video{width:64%;left:19%}.bannerContainer a.cta{top:55%;left:30%}}@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait){}@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape){.bannerContainer a.cta{top:65%;left:12%}.bannerContainer .logo{height:120px}.bannerContainer .hotspots, .bannerContainer .video{top:30%;width:39%}}@media screen and (max-device-width: 767px) and (orientation:portrait){.bannerContainer .logo{padding:15px;width:95%}.bannerContainer .logo img{width:auto !important;position:absolute;left:50%;top:20%;-webkit-transform:translateX(-65px);-ms-transform:translateX(-65px);transform:translateX(-65px)}.bannerContainer .copyWrapper{font-size:40px}.bannerContainer .hotspots, .bannerContainer .video{width:80%;left:10%;top:30%}.bannerContainer .products img{width:35%}.bannerContainer a.cta{left:20%;top:58%;font-size:24px}img.rotateImg{width:75px}}@media screen and (max-device-width: 767px) and (orientation:landscape){.bannerContainer a.cta{left:35%;top:35%;font-size:18px}.bannerContainer .logo img{width:auto !important;position:absolute;left:40%;top:20%;-webkit-transform:translateX(-65px);-ms-transform:translateX(-65px);transform:translateX(-65px)}.bannerContainer .copyWrapper{font-size:28px;top:75px}.bannerContainer .products .product2{bottom:-130px}}@media screen and (max-device-width: 667px) and (orientation:landscape){.bannerContainer .copyWrapper{font-size:22px;top:19.5%}.bannerContainer .hotspots, .bannerContainer .video{top:35%;width:40%}.bannerContainer a.cta{padding:10px 40px}}@media screen and (max-device-width: 667px) and (orientation:portrait){.bannerContainer .logo{padding:15px 6%;width:95%;height:15%;top:0}.bannerContainer .copyWrapper{font-size:40px;top:15%}.bannerContainer a.cta{left:25%;top:58%;font-size:24px}}",
+    head = parent.document.head || parent.document.getElementsByTagName('head')[0],
+    style = parent.document.createElement('style');
+    style.type = 'text/css';
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    head.appendChild(style);
+    /******** css insert end **********/
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    
+
+    var allBannerImages = [], uploadImagesCount=0;
+    allBannerImages[0] = 'http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/logo.png';
+    allBannerImages[1] = 'http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/bg.png';
+    allBannerImages[2] = 'http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/cta.png';
+    allBannerImages[3] = 'http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/tshirt.png';
+    
+
+    allBannerImages.forEach(function (imgSrc) {
+        var newImgTag = parent.document.createElement('img');
+        newImgTag.src = imgSrc;
+        newImgTag.addEventListener('load', function () {
+            newImgTag.remove();
+            uploadImagesCount++;
+
+            if (allBannerImages.length == uploadImagesCount) {
+
+                var node = parent.document.querySelector(".page-subheader") || parent.document.querySelector(".nfl-page-subheader"),
+                    ele = document.createElement("div");
+                ele.className = "banner-item";
+                ele.innerHTML = "<div id='creativeBG'><div class='bannerContainer'></div></div>";
+                node.parentNode.insertBefore(ele, node.nextSibling);
+
+
+
+                
+                        var config = {
+                        "formate" : "inter_scroller",
+                        "adType": "video", // {"static", "animated", "video", "carousel", "parallex", "hotspots"}
+                        "adSize":{
+                            "width":"100%",
+                            "height":"100vh"
+                        }, // ad width x ad height
+                        // "size":"2MB", // max size
+                        "adContainer":".bannerContainer", // advert inject container id
+                        "cta": {
+                            "isCtaShow": true, // {true, false}
+                            "ctaType":'onlyCtaBtn', // {"onlyCtaBtn", "FullAdCta"}
+                            // "ctaImg":"./images/cta.png",
+                            "url":"https://www.google.com/",
+                            "copy": "SHOP NOW",
+                            "color": "#000",
+                            "bgColor": "inherit",
+                            // "top": "65%",
+                            // "left": "10%"
+                        },
+                        "images" : {
+                            // "bgImg": "./images/bg.png",
+                            "logo": "http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/logo.png",        
+                            "product1": "http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/bg.png",        
+                            "product2": "http://creative.sebpo.com/accuweather/2020/ScrollingAd/innerscroller/300x250/v1/tshirt.png",        
+                            // "product3": "./images/product3.png",        
+                            // "rotateImg": "./images/ball.png",        
+                        },
+
+                        "copy": {
+                            "copy1":"Exclusive apparel ",
+                            "copy2":"in our store",        
+                        },
+
+                        "isShowAdBar": true, // true, false
+
+                        
+                    
+                    }
+
+                    setTimeout(function(){ console.log('razib Ad'); createDaynamicAd(); }, 5000);
+                    
+                    
+                    
+
+function initScrollMagic() {
+    if (config) {
+        let adData = config;
+        let adContainer = adData.adContainer;
+        let adContainerWidth = adData.adSize.width;
+        let adContainerHeight = adData.adSize.height;
+        let adImages = adData.images;
+        let adCopyArray = adData.copy;
+        let adVideoSettings = adData.video;
+
+        const controller = new parent.ScrollMagic.Controller();
+
+        var tl = new parent.TimelineMax({ onUpdate: updatePercentage });
+
+        if (adImages['logo']) {
+            tl.from(adContainer + " .logo", 1, { alpha: 0 });
+        }
+
+        if (adCopyArray) {
+            tl.from(adContainer + " .copyWrapper", 2, { alpha: 0 });
+            if (adCopyArray['copy1']) {
+                tl.from(adContainer + ' .copy1', 3, { x: 200, opacity: 0 });
+            }
+
+            if (adCopyArray['copy2']) {
+                tl.from(adContainer + ' .copy2', 4, { x: -200, opacity: 0 });
+            }
+        }
+
+
+        if (adVideoSettings) {
+            // tl.from(adContainer+' .video', 2, {alpha:0, onComplete: videoPlayFn});
+            tl.from(adContainer + ' .video', 2, { alpha: 0 });
+        }
+
+        if (adData['hotspots']) {
+            tl.from(adContainer + ' .hotspots', 2, { alpha: 0 });
+        }
+
+
+        if (adImages['product1']) {
+            
+            tl.from(adContainer + ' .product1', 3, { y: -600, opacity: 1 });
+        }
+        if (adImages['product2']) {
+            tl.from(adContainer + ' .product2', 5, { y: 600, opacity: 1 });
+        }
+        if (adImages['product3']) {
+            tl.from(adContainer + ' .product3', 3, { x: 300, opacity: 0 });
+        }
+
+        if (adData['cta']) {
+            tl.from(adContainer + ' .cta', 2, { alpha: 0 });
+        }
+
+        
+        if (adImages['rotateImg']) {
+            let continerWidth = parent.document.querySelector(adContainer).offsetWidth;
+             continerWidth += parent.document.querySelector('.rotateImg ').offsetWidth;
+            tl.from(adContainer + ' .rotateImg', 10, { x: continerWidth+100, alpha: 1, rotation: 360 });
+        }
+
+
+
+        const scene = new parent.ScrollMagic.Scene({
+            triggerElement: adContainer,
+            triggerHook: "onLeave",
+            // triggerHook: 0.3,
+            duration: "100%"
+        })
+            .setPin(adContainer, { pushFollowers: true })
+            //.on("enter leave", stopAdFn)
+            .setTween(tl)
+            //.addIndicators({name: "bannerContainer"}) 
+            .addTo(controller);
+
+        function updatePercentage() {
+            tl.progress();
+            //console.log(tl.progress());
+            if (adVideoSettings) {
+                stopAdFn();
+            }
+        }
+
+        // scene.on("start", function (event) {
+        //     console.log("Hit start point of scene.");
+        //     videoPlayFn()
+        // });
+
+        // scene.on("end", function (event) {
+        //     console.log("Hit end point of scene.");
+        //     stopAdFn();
+        // });
+
+        // scene.on("leave", function (event) {
+        //     console.log("Scene left.");
+        //     stopAdFn();
+        // });
+
+        // scene.on("shift", function (event) {
+        //     console.log("Scene moved, because the " + event.reason + " has changed.)");
+        // });
+
+        function isHidden(el) {
+            var style = window.getComputedStyle(el);
+            return parseInt(style.opacity);
+        }
+
+        function stopAdFn() {
+            let videoContainer = parent.document.querySelector(".bannerContainer .video");
+            var bannerVideo = parent.document.querySelector(".bannerContainer video");
+            if (parseInt(videoContainer.style.opacity) < 1) {
+                bannerVideo.pause();
+                console.log('video pause');
+            } else {
+                if (bannerVideo.paused) {
+                    console.log('video auto play');
+                    bannerVideo.currentTime = 0;
+                    bannerVideo.play();
+                    if (document.querySelector(".bannerContainer .playIcon")) {
+                        document.querySelector(".bannerContainer .playIcon").remove();
+                    }
+                }
+            }
+        }
+    }
+}
+
+function createDaynamicAd() {
+
+    if (config) {
+        let adData = config;
+        // let adContainer = parent.$(adData.adContainer + ' #main-ad');
+        let adContainer = parent.$(adData.adContainer);
+        let adContainerWidth = adData.adSize.width;
+        let adContainerHeight = adData.adSize.height;
+        let adImages = adData.images;
+        let adCopyArray = adData.copy;
+        let adVideoSettings = adData.video;
+        let videoContainer = adContainer.find('.video');
+
+       
+
+        // set ad width and height
+        adContainer.width(adContainerWidth);
+        adContainer.height(adContainerHeight);
+
+        adContainer.addClass(adData['adType']);
+
+        if(adData['isShowAdBar']){
+            let adBar = '<div class="ad-header">Adevertisement</div><div class="ad-fotter">Scroll to continue with content</div>';           
+            adContainer.append(adBar);
+        }
+
+        // console.log(adContainer)
+
+        // set ad width and height
+        parent.$(adData.adContainer).width(adContainerWidth);
+        parent.$(adData.adContainer).height(adContainerHeight);
+        adContainer.width(adContainerWidth);
+        adContainer.height(adContainerHeight);
+
+
+        // set ad background image
+        if (adImages['bgImg']) {
+            adContainer.css('background-image', 'url(' + adImages['bgImg'] + ')');
+        }
+
+        // set ad logo
+        if (adImages['logo']) {
+            adContainer.append('<div class="logo"><img src="' + adImages['logo'] + '" /></div>');
+        }
+
+        // set ad copy
+        if (adCopyArray) {
+            let copyHtml = '<div class="copyWrapper">';
+            if (adCopyArray['copy1']) {
+                copyHtml += '<span class="copy1">' + adCopyArray['copy1'] + '</span>';
+            }
+
+            if (adCopyArray['copy2']) {                
+                    copyHtml += '<span class="copy2">' + adCopyArray['copy2'] + '</span>';
+            }
+
+            copyHtml += '</div>';
+            adContainer.append(copyHtml);
+        }
+
+
+        // products
+        adContainer.append('<div class="products "></div>')
+        // set ad products
+        if (adImages['product1']) {
+            adContainer.find('.products').append('<img class=" product1" src="' + adImages['product1'] + '" />');
+        }
+        if (adImages['product2']) {
+            adContainer.find('.products').append('<img class=" product2" src="' + adImages['product2'] + '" />');
+        }
+        if (adImages['product3']) {
+            adContainer.find('.products').append('<img class=" product3" src="' + adImages['product3'] + '" />');
+        }
+
+        if (adImages['rotateImg']) {
+            adContainer.append('<div class="rotateContainer"><img class="rotateImg " src="' + adImages['rotateImg'] + '" /></div>');
+        }
+
+
+
+
+
+        // set ad video
+        if (adVideoSettings) {
+            if (adVideoSettings['url']) {
+                let videoHtml = ``;
+
+                if (adVideoSettings['playIcon']) {
+                    videoHtml += `<div class="playIcon"><img src="${adVideoSettings['playIcon']}" /></div>`;
+                }
+                videoHtml += `<video   `;
+                if (adVideoSettings['muted']) {
+                    videoHtml += ` muted `;
+                }
+                if (adVideoSettings['controls']) {
+                    videoHtml += ` controls `;
+                }
+
+                if (adVideoSettings['width']) {
+                    videoHtml += ` width="${adVideoSettings['width']}" `;
+                }
+                if (adVideoSettings['height']) {
+                    videoHtml += ` height="${adVideoSettings['height']}" `;
+                }
+
+                if (adVideoSettings['poster']) {
+                    videoHtml += ` poster="${adVideoSettings['poster']}" `;
+                }
+                videoHtml += ` ><source src="${adVideoSettings['url']}" type="${adVideoSettings['type']}">Your browser does not support the video tag.</video>`;
+
+
+                adContainer.append('<div class="video">' + videoHtml + '</div>');
+
+                var bannerVideo = document.querySelector(adData.adContainer + " video");
+
+                parent.$("body").on('click', '.playIcon', function (e) {
+                    console.log('video play');
+                    // bannerVideo.setAttribute('controls', '');
+                    bannerVideo.play();
+                    this.remove();
+                    e.preventDefault();
+                });
+
+            }
+        }
+
+        // set hot spots points
+
+        if (adData['hotspots']) {
+            let hotSpotsData = adData['hotspots'];
+            let hotSpotsHtml = '';
+            hotSpotsHtml += '<div class="hotspots">';
+
+            if (hotSpotsData['bgImg']) {
+                hotSpotsHtml += '<div class="hotspotsImg"><img src="' + hotSpotsData['bgImg'] + '" /></div>';
+            }
+
+
+            // console.log(hotSpotsData['points']);
+
+            if (hotSpotsData['points']) {
+                for (let [key, value] of Object.entries(hotSpotsData['points'])) {
+                    // console.log(value['title']);
+
+                    let hotspotsPointStyle = 'style="left: ' + value['left'] + ' !important; top:' + value['top'] + ' !important;"';
+                    hotSpotsHtml += '<div class="hotspotsInfo">';
+                    hotSpotsHtml += '<div class="hotspotsPoint" ' + hotspotsPointStyle + '></div>';
+                    hotSpotsHtml += '<div class="hotspotsMsg">';
+                    hotSpotsHtml += '<div class="hotspotsTitle">' + value['title'] + '</div>';
+                    hotSpotsHtml += '<div class="hotspotsCopy">' + value['copy'] + '</div>';
+                    hotSpotsHtml += '</div>';
+                    hotSpotsHtml += '</div>';
+                }
+            }
+
+            hotSpotsHtml += '</div>';
+            adContainer.append(hotSpotsHtml);
+
+
+            parent.$(document).on('mouseover', '.hotspotsPoint', function (e) {
+                parent.$(this).siblings('.hotspotsMsg').fadeIn();
+            });
+
+            parent.$(document).on('mouseout', '.hotspotsPoint', function (e) {
+                parent.$(this).siblings('.hotspotsMsg').fadeOut();
+            });
+
+        }
+
+        // cta 
+
+        if (adData['cta']) {
+            let ctaData = adData['cta'];
+
+
+            if (ctaData['ctaType'] != 'fullAdCta') {
+                if (ctaData['ctaImg']) {
+                    let ctaHtml = '<a class="ctaImg" target="_blank" >';
+                    ctaHtml += '<img src="' + ctaData['ctaImg'] + '" />';
+                    ctaHtml += '</a>';
+                    adContainer.append(ctaHtml);
+                } else {
+
+                let ctaHtml = '<a class="cta" target="_blank" ';
+
+                if (ctaData['url']) {
+                    ctaHtml += ` href="${ctaData['url']}" `;
+                }
+
+                ctaHtml += ` style="`;
+                if (ctaData['color']) {
+                    ctaHtml += ` color:${ctaData['color']} !important; `;
+                }
+                if (ctaData['bgColor']) {
+                    ctaHtml += ` background-color:${ctaData['bgColor']} !important; `;
+                }
+                if (ctaData['top']) {
+                    ctaHtml += ` top:${ctaData['top']} !important; `;
+                }
+                if (ctaData['left']) {
+                    ctaHtml += ` left:${ctaData['left']} !important; `;
+                }
+
+                ctaHtml += ` " >`;
+                
+                if (ctaData['copy']) {
+                    ctaHtml += '<span>'+ctaData['copy']+'</span>';
+                }
+
+                ctaHtml += '</a>';
+                adContainer.append(ctaHtml);
+            }
+                
+            } else {
+                console.log('cta add')
+                let ctaHtml = '<a class="fullAdCta" target="_blank" ';
+
+                if (ctaData['url']) {
+                    ctaHtml += ` href="${ctaData['url']}" >&nbsp;`;
+                }
+
+                ctaHtml += '</a>';
+                adContainer.append(ctaHtml);
+
+            }
+        }
+
+        
+        initScrollMagic();
+    }
+}
+
+                
+                var Click_URL = 'http://www.google.com';
+                var ClickTag = parent.document.getElementById("bannerWrapper");
+
+                try {
+                    ClickTag.onclick = function () {
+                        window.open(Click_URL, '_blank');
+                    };
+                } catch (error) {
+                    console.log('click not working');
+                }
+
+
+
+                var elem = parent.document.getElementById('top-1');
+                if (elem) { elem.parentNode.removeChild(elem); }
+            }
+        });
+    });
+}, false);
+</script>

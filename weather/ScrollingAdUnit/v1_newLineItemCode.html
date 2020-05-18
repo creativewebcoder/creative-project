@@ -1,0 +1,41 @@
+<img src="%i" height="1" width="1" border="0" />
+
+<script>
+    console.log('razib');
+    
+		var au = '%%ADUNIT%%';
+
+        console.log('au='+au);
+
+        // var node = parent.document.querySelector(".page-subheader") || parent.document.querySelector(".nfl-page-subheader"),
+  
+		// if (au.indexOf('mweb') != -1 && au.indexOf('top') != -1){
+            
+			// top.awINNERSCROLL = true;			
+			// var div = 'top';
+			var container = parent.document.querySelector(".page-subheader") || parent.document.querySelector(".nfl-page-subheader");
+			container.setAttribute("style","height: 100vh; position: relative; margin: 40px 0;");
+
+            console.log('top='+container);
+				
+			var inner = container.getElementsByTagName("div")[0];
+			inner.setAttribute("style","width: 100%; top: 0; left: 0; clip: rect(0,100vw,100vh,0); overflow-x: hidden; overflow-y: auto; position: fixed; -webkit-transform: translateZ(0); -moz-transform: translateZ(0); transform: translateZ(0);");
+              
+			var frame = inner.getElementsByTagName("iframe")[0];
+			frame.setAttribute("style","width: 100vw; height: 100vh");
+    		
+			var adlabel = document.createElement("div");
+			var lt = document.createTextNode("Scroll to continue");
+			adlabel.appendChild(lt);
+			adlabel.setAttribute("style","position:absolute; z-index:9; margin-top:-26px; color:#fff; background-color:#222; text-align:center; width:100%; left:0;font-size:14px; padding:3px 0; height:26px");
+    
+			container.appendChild(adlabel);
+				
+			// function awInnerScroll(){
+			// 	var pos = container.getBoundingClientRect();
+			// 	inner.style.clip = "rect("+pos.top+"px,100vw,"+pos.bottom+"px,0)";
+			// }
+			// top.addEventListener('scroll', awInnerScroll);
+			// awInnerScroll();
+		// }	
+</script>

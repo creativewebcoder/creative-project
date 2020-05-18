@@ -1,4 +1,36 @@
-var config = {
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>SBPO Portfolio Banner ads</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="utf-8" />
+   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="desktop">
+    <!-- %%CLICK_URL_UNESC%% -->
+   <div class="bannerContainer"></div>
+   
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+   <!-- <script type="text/javascript">
+    document.write('<sc'+'ript type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?dfpAdUnit=%%ADUNIT%%"></scr'+'ipt>');
+    document.write('<sc'+'ript type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js?dfpAdUnit=%%ADUNIT%%"></scr'+'ipt>');
+    document.write('<sc'+'ript type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js?dfpAdUnit=%%ADUNIT%%"></scr'+'ipt>');
+    document.write('<sc'+'ript type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js?dfpAdUnit=%%ADUNIT%%"></scr'+'ipt>');
+    document.write('<sc'+'ript type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js?dfpAdUnit=%%ADUNIT%%"></scr'+'ipt>');
+    </script> -->
+
+   <script>
+       console.log('razib Ad')
+      var config = {
     "formate" : "inter_scroller",
     "adType": "video", // {"static", "animated", "video", "carousel", "parallex", "hotspots"}
     "adSize":{
@@ -11,79 +43,30 @@ var config = {
         "isCtaShow": true, // {true, false}
         "ctaType":'onlyCtaBtn', // {"onlyCtaBtn", "FullAdCta"}
         // "ctaImg":"./images/cta.png",
-        "url":"https://www.taylormadegolf.com/",
-        "copy": "Buy Now",
-        "color": "#fff",
+        "url":"https://www.google.com/",
+        "copy": "SHOP NOW",
+        "color": "#000",
         "bgColor": "inherit",
         // "top": "65%",
         // "left": "10%"
     },
     "images" : {
-        "bgImg": "./images/bg.jpg",
-        "logo": "./images/logo2.png",        
-        "product1": "./images/product1.png",        
-        "product2": "./images/product2.png",        
-        "product3": "./images/product3.png",        
-        "rotateImg": "./images/ball.png",        
+        // "bgImg": "./images/bg.png",
+        "logo": "./images/logo.png",        
+        "product1": "./images/bg.png",        
+        "product2": "./images/tshirt.png",        
+        // "product3": "./images/product3.png",        
+        // "rotateImg": "./images/ball.png",        
     },
 
     "copy": {
-        "copy1":"SEE THE STORY",
-        "copy2":"BEHIND THE SHAPE",        
+        "copy1":"Exclusive apparel ",
+        "copy2":"in our store",        
     },
-
-    "hotspots": {
-        "bgImg" : "./images/taylormade.jpg",
-        "points": {
-            0:{
-                title:"SIM Driver",
-                copy:"We Reshaped the Driver, So You Can Reshape Your Game.",
-                // url:'https://www.taylormadegolf.com/SIM-Driver/DW-JJI23.html?lang=default',
-                left:"150px",
-                top:"20px"
-            },
-            1:{
-                title:"P790 Irons",
-                copy:"You Don't Mess With What Works. You Work To Make It Better.",
-                // url:'https://www.taylormadegolf.com/P790-Irons/DW-AL464.html?lang=default',
-                left:"70px",
-                top:"70px"
-            },
-            2:{
-                title:"MySpider X",
-                copy:"MySpider X allows you to personalize color, sightline, weights, and more.",
-                // url:'https://www.taylormadegolf.com/MySpider-X/DW-JIC83.html?lang=default',
-                left:"255px",
-                top:"60px"
-            }            
-        }
-    },
-
-
-    // "video": {
-    //     "url": "advert.mp4",
-    //     "poster": "./images/poster.png",
-    //     "playIcon": "./images/play.png",
-    //     "width": "100%",
-    //     "height": "auto",
-    //     "type":"video/mp4",
-    //     "controls": true, // true, false
-    //     "muted": true, // true, false
-    // },
 
     "isShowAdBar": true, // true, false
 
-    // "adCSS": "",
-    // "adJS": "",
-    // "adHTML":"",
-
-    // "importedCSSLibraryLink" : {
-        
-    // },
-
-    // "importedJSLibraryLink" : {
-
-    // }
+    
   
 }
 
@@ -254,10 +237,10 @@ function initScrollMagic() {
 
         if (adImages['product1']) {
             
-            tl.from(adContainer + ' .product1', 2, { x: 300, opacity: 0 });
+            tl.from(adContainer + ' .product1', 3, { y: -600, opacity: 1 });
         }
         if (adImages['product2']) {
-            tl.from(adContainer + ' .product2', 2.5, { x: 300, opacity: 0 });
+            tl.from(adContainer + ' .product2', 5, { y: 600, opacity: 1 });
         }
         if (adImages['product3']) {
             tl.from(adContainer + ' .product3', 3, { x: 300, opacity: 0 });
@@ -586,3 +569,8 @@ function createDaynamicAd() {
     }
 }
 
+
+   </script>
+</body>
+
+</html>
