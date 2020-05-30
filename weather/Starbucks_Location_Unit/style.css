@@ -1,0 +1,269 @@
+
+
+.banner-item {
+    margin-top: 24px;
+}
+
+#primoFC div.cityforecast {
+    width: 632px;
+    top: -15px;
+    z-index: 100;
+}
+
+#btm_bg {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 93px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+#primoFC {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_349727_bg.png);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: -24px;
+    cursor: pointer;
+}
+#primoFC::after {
+    content: '';
+    display: block;
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/bottom_bar.png);
+    background-repeat: repeat-x;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+#primoFC.city-349727 {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_349727_bg.png);
+}
+
+#primoFC.city-347629 {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_347629_bg.png);
+}
+
+#primoFC.city-348308 {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_348308_bg.png);
+}
+#primoFC.city-348735 {
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_348735_bg.png);
+}
+
+
+
+
+#primoFC #creativeBG {
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1488x300_content.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0px;
+    overflow-x: hidden;
+    z-index: 1;
+    background-position-y: bottom;
+    background-size: cover;
+}
+
+#primoFC #creativeBG:hover {
+    cursor: pointer
+}
+
+#feed-tabs.panel-list.cityforecast {
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: 604px;
+    z-index: 10
+}
+
+#trending-now {
+    margin-top: 25px
+}
+
+@media(max-width:1366px) and (min-width:980px) {
+    #primoFC #creativeBG {
+        width: 960px;
+        height: 300px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_content.png)
+    }
+
+    #primoFC {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_349727_bg.png)
+    }
+        
+    #primoFC.city-349727 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_349727_bg.png);
+    }
+
+    #primoFC.city-347629 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_347629_bg.png);
+    }
+
+    #primoFC.city-348308 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_348308_bg.png);
+    }
+    #primoFC.city-348735 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/desktop_1280x300_348735_bg.png);
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    #primoFC {
+        display: block;
+    }
+}
+
+@media(max-width:979px) and (min-width:768px) {
+    #primoFC {
+        margin-bottom: 30px;
+        margin-top: -24px;
+        height: 300px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_349727_bg.png)
+    }
+
+    
+    #primoFC.city-349727 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_349727_bg.png);
+    }
+
+    #primoFC.city-347629 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_347629_bg.png);
+    }
+
+    #primoFC.city-348308 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_348308_bg.png);
+    }
+    #primoFC.city-348735 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_348735_bg.png);
+    }
+
+
+
+    #primoFC #creativeBG {
+        position: relative;
+        width: 768px;
+        height: 300px;
+        top: 0px;
+        right: 0px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_content.png)
+    }
+}
+
+@media (max-width: 767px) and (min-width: 421px) {
+    #primoFC {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_349727_bg.png)
+    }
+
+    #primoFC.city-349727 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_349727_bg.png);
+    }
+
+    #primoFC.city-347629 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_347629_bg.png);
+    }
+
+    #primoFC.city-348308 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_348308_bg.png);
+    }
+    #primoFC.city-348735 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_348735_bg.png);
+    }
+
+    #primoFC #creativeBG {
+        width: 96%;
+        height: 100%;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPad_768x300_content.png);
+        background-size: contain;
+    }
+}
+
+@media(max-width:375px) {
+    body #primoFC {
+        height: 250px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_349727_bg.png)
+    }
+
+    #primoFC.city-349727 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_349727_bg.png);
+    }
+
+    #primoFC.city-347629 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_347629_bg.png);
+    }
+
+    #primoFC.city-348308 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_348308_bg.png);
+    }
+    #primoFC.city-348735 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_348735_bg.png);
+    }
+    
+}
+
+@media(max-width:420px) {
+    #primoFC {
+        background-position: bottom;
+        margin-bottom: 10px;
+        margin-top: -24px;
+        height: 250px;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_349727_bg.png)
+    }
+
+    
+    #primoFC.city-349727 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_349727_bg.png);
+    }
+
+    #primoFC.city-347629 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_347629_bg.png);
+    }
+
+    #primoFC.city-348308 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_348308_bg.png);
+    }
+    #primoFC.city-348735 {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_348735_bg.png);
+    }
+
+    #primoFC #creativeBG {
+        height: 250px;
+        width: 100%;
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_content.png);
+        background-position: center;
+        background-size: contain;
+        margin: 0 auto;
+        top: 0px;
+    }
+}
+
+@media(max-width:375px) {
+    #primoFC #creativeBG {
+        background-image: url(http://creative.sebpo.com/accuweather/2020/Location_Unit/v5/iPhone_375x250_content.png)
+    }
+
+}
+
+@media(max-width:360px) {
+    #primoFC #creativeBG {
+        background-size: contain;
+        width: 100%;
+    }
+}
+
+@media(max-width:320px) {
+    #primoFC #creativeBG {
+        width: 100%;
+        background-size: contain;
+    }
+}

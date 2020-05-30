@@ -1,0 +1,7 @@
+LineItem : https://admanager.google.com/6581#delivery/line_item_creative_association/detail/line_item_id=5177963721&creative_id=138312300799&li_tab=creatives
+
+Preview Link : 
+https://pubads.g.doubleclick.net/gampad/preview_cookie?gct=y-0twFN8hUUY0LqV9gUw0NbK_QWIAYCAgKDnte_AzgE&op=set&redirect=https://www.accuweather.com/en/us/new-york/10007/weather-forecast/349727&redirect_hash=AJlzBa3fYDviboIoOwpLe1HoGTakR2a9Cg&lineItemId=5177963721&creativeId=138312300799
+
+Image link : 
+https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/v1/

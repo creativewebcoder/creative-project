@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="ad.size" content="width=300,height=250">
+    <title>AW_Daily_300x250</title>
+  	<script> window.frameElement.style.width = '100%';</script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0
+        }
+
+        #CLICK {
+            width: 100%;
+            height: 250px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .banner-item {
+            background: url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/bg_web.png) no-repeat;
+            max-width: 970px;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 1px solid #202020;
+            box-sizing: border-box;
+            position: absolute
+        }
+        .innerWrapper{
+            width: 96%;
+            padding: 18px 2%;
+            overflow: hidden;
+        }
+        .imagePanels{
+            width: 65%;
+            float: left;
+            overflow: hidden;
+        }
+        .majorImg{
+            border:1px solid #cccccc;
+            box-sizing: border-box;
+            /* height: 213px; */
+            width: 100%;
+            float: left;
+            overflow: hidden;
+            margin: auto 0;
+        }
+        .minorImgs{
+            width: 25%;
+            float: right;
+            overflow: hidden;
+        }
+        .thumbsImg{
+            border:1px solid #cccccc;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+        }
+        .marginExtra{
+            margin: 0 0 13px 0;
+        }
+        .copyPanels{
+            width: 35%;
+            float: right;
+        }
+        .copyPanels img, .majorImg img, .minorImgs img{
+            margin: 0 auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle; 
+        }
+        .majorImg img{
+            margin: 1%;
+            width: 30%;
+            float: left;
+        }
+        .thumbsImg{
+            overflow: hidden;
+        }
+        .minorImgs img{
+            margin-top: 5px;
+            width: 83%;
+        }
+        .copyPanels .displayMobile{
+            display: none;
+        }
+
+@media screen and (max-width: 768px) {
+    .majorImg{
+        width: 61%;
+    }
+    .minorImgs{
+        width: 35%;
+    }
+    .minorImgs img {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width:727px) {
+    .majorImg img {
+        width: 90%;
+        margin-top: 35px;
+    }
+    .minorImgs img {
+        width: 92%;
+        margin-top: 12px;
+    }
+   
+}
+@media screen and (max-width: 414px) {
+    .banner-item {
+        background: url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/bg_mobile_web.png) no-repeat;
+        max-width: 414px;
+    }
+    .innerWrapper {
+        width: 94%;
+        padding: 15px 3%;
+    }
+    .majorImg{
+        width: 100%;
+        height: 130px;
+    }
+    .majorImg img {
+        margin: 10px;
+        width: 32%;
+    }
+    .minorImgs{
+        width: 100%;
+        height: 80px;
+        margin-top: 10px;
+    }
+    .thumbsImg{
+        border:1px solid #cccccc;
+        box-sizing: border-box;
+        width: 47%;
+        height: auto;
+        float: left;
+    }
+    .minorImgs img {
+        margin: 5px auto;
+        width: 83%;
+    }
+    .marginExtra{
+        margin: 0 6% 0 0;
+    }
+    .copyPanels .displayDesktop{
+        display: none;
+    }
+    .copyPanels .displayMobile{
+        display: block;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:375px) {
+    .majorImg img {
+        width: 71%;
+    }
+    .minorImgs img {
+        width: 92%;
+    }
+   
+}
+@media screen and (max-width:360px) {
+    .majorImg img {
+        width: 74%;
+    }
+    .minorImgs img {
+        width: 95%;
+    }
+   
+}
+@media screen and (max-width:320px) {
+    .majorImg img {
+        width: 83%;
+    }
+    .minorImgs img {
+        margin-top: 10px;
+    }
+  .copyPanels .displayMobile{
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width:300px) {
+    .majorImg img {
+        width: 90%;
+    }
+    .minorImgs img {
+        margin-top: 12px;
+    }
+  .copyPanels .displayMobile{
+        margin-top: 28px;
+    }
+   
+}
+    </style>
+</head>
+
+<body>
+    <div class="banner-item">
+        <a href="%%CLICK_URL_UNESC%%https://www.google.com/" target="_blank" id="CLICK"></a>
+        <div class="innerWrapper">
+            <div class="imagePanels">
+                <div class="majorImg">
+                    <img src="https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/major_image.png" alt="">
+                    <img src="https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/minor_image1.png" alt="">
+                    <img src="https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/minor_image2.png" alt="">
+                </div>
+            </div>
+            <div class="copyPanels">
+                <img src="https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/copy_web.png" class="displayDesktop" alt="">
+                <img src="https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/responsive/layout/v1/copy_mobile_web.png" class="displayMobile" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

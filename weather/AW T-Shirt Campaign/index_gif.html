@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="ad.size" content="width=300,height=600">
+    <title>AW_Daily_300x600</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .banner-item {
+            display: none;
+            width: 298px;
+            height: 598px;
+            overflow: hidden;
+            border: 1px solid #202020;
+            position: absolute;
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/bg.gif) no-repeat;
+            background-size: cover;
+            /* animation: animate 15s linear infinite; */
+        }
+
+
+        @keyframes animate {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: calc(100% - 100vw) 0;
+            }
+        }
+
+
+
+        .mainBanner {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/content.png) no-repeat center;
+        }
+
+        .banner-item * {
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #imgFlip {
+            top: 176px;
+        }
+
+        .arrow-left {
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/arrow.png) no-repeat center;
+            transform: rotate(180deg);
+            width: 20px;
+            height: 20px;
+            left: 10px;
+            top: 309px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .arrow-right {
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/arrow.png) no-repeat center;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 10px;
+            top: 309px;
+            cursor: pointer;
+        }
+
+
+
+        .flip-container {
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -o-perspective: 1000;
+            perspective: 1000;
+
+        }
+
+        .flip-container.flip .flipper {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+
+        .flip-container,
+        .front,
+        .back {
+            width: 300px;
+            height: 250px;
+        }
+
+        .flipper {
+            -webkit-transition: 0.6s;
+            -webkit-transform-style: preserve-3d;
+
+            -moz-transition: 0.6s;
+            -moz-transform-style: preserve-3d;
+
+            -o-transition: 0.6s;
+            -o-transform-style: preserve-3d;
+
+            transition: 0.6s;
+            transform-style: preserve-3d;
+
+            position: relative;
+        }
+
+        .front,
+        .back {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/TSHIRT1.png) center no-repeat;
+            z-index: 2;
+            background-size: contain;
+        }
+
+        .back {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+
+            background: #f8f8f8;
+            background: url(http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/TSHIRT2.png) center no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-item">
+        <div class="mainBanner">
+            <div id="imgFlip" class="flip-container ">
+                <div class="flipper">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow arrow-left"></div>
+        <div class="arrow arrow-right"></div>
+    </div>
+    <script>
+        window.addEventListener('load', (event) => {
+            console.log('Razib Banner Load')
+            var allBannerImages = [], uploadImagesCount = 0;
+            allBannerImages[0] = 'http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/bg.gif';
+            allBannerImages[1] = 'http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/content.png';
+            allBannerImages[2] = 'http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/arrow.png';
+            allBannerImages[3] = 'http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/TSHIRT1.png';
+            allBannerImages[4] = 'http://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x600/v1/TSHIRT2.png';
+
+            allBannerImages.forEach(function (imgSrc) {
+                var newImgTag = parent.document.createElement('img');
+                newImgTag.src = imgSrc;
+                newImgTag.addEventListener('load', function () {
+                    newImgTag.remove();
+                    uploadImagesCount++;
+
+                    if (allBannerImages.length == uploadImagesCount) {
+                        document.querySelector('.banner-item').style.display = 'block';
+                        document.querySelector('.arrow-left').onclick = function () { imgFlip() };
+                        document.querySelector('.arrow-right').onclick = function () { imgFlip() };
+                        function imgFlip() {
+                            var element = document.getElementById("imgFlip");
+                            element.classList.toggle("flip");
+                        }
+
+
+                        var Click_URL = "%%CLICK_URL_UNESC%%https://www.google.com/";
+                        var ClickTag = document.querySelector(".mainBanner");
+
+                        try {
+                            ClickTag.onclick = function () {
+                                window.open(Click_URL, '_blank');
+                            };
+                        } catch (error) {
+                            console.log('click not working');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,11 @@
 LineItem : 
 
-Preview Link : 
+Preview Link : https://pubads.g.doubleclick.net/gampad/preview_cookie?gct=HuTJET3I9scYuue09gUwuoPq_QWIAYCAgKCX9pKfuAE&op=set&redirect=https://www.accuweather.com/en/us/new-york/10007/weather-forecast/349727&redirect_hash=AJlzBa3fYDviboIoOwpLe1HoGTakR2a9Cg&lineItemId=5066586622&creativeId=138311824329
 
 Image link : http://creative.sebpo.com/
+
+
+
+old Preview link:
+
+https://pubads.g.doubleclick.net/gampad/preview_cookie?gct=o30GAmdTUV4Y6ICb9gUw6JzQ_QWIAYCAgKCX5srw7AE&op=set&redirect=https://www.accuweather.com/en/us/new-york/10007/weather-forecast/349727&redirect_hash=AJlzBa3fYDviboIoOwpLe1HoGTakR2a9Cg&lineItemId=5066586622&creativeId=138311824329

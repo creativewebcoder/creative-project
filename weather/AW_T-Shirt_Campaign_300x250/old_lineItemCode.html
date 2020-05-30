@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="UTF-8">  
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta name="ad.size" content="width=300,height=250">
+<title>Chrome_Animation_Directions</title>
+<script async>
+
+var clickTag = "%%CLICK_URL_UNESC%%https://www.accuweather.com/";
+  
+var allBannerImages = [], uploadImagesCount = 0;
+    allBannerImages[0] = 'https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/bg.gif';
+    allBannerImages[1] = 'https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/product1.png';
+    allBannerImages[2] = 'https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/product2.png';
+    allBannerImages[3] = 'https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/copy.png';
+    
+    
+
+  allBannerImages.forEach(function (imgSrc) {
+    var newImgTag = parent.document.createElement('img');
+    newImgTag.src = imgSrc;
+    newImgTag.addEventListener('load', function () {
+      newImgTag.remove();
+      uploadImagesCount++;
+
+      if (allBannerImages.length == uploadImagesCount) {
+
+          document.addEventListener('DOMContentLoaded',function(event){
+          // array with texts to type in typewriter
+          var dataText = [ "What’s my local forecast?"];
+
+          // type one text in the typwriter
+          // keeps calling itself until the text is finished
+          function typeWriter(text, i, fnCallback) {
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+              // add next character to h1
+             document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+              // wait for a while and call this function again for next character
+              setTimeout(function() {
+                typeWriter(text, i + 1, fnCallback)
+              }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+              // call callback after timeout
+              setTimeout(fnCallback, 700);
+            }
+          }
+          // start a typewriter animation for a text in the dataText array
+           function StartTextAnimation(i) {
+             if (typeof dataText[i] == 'undefined'){
+                setTimeout(function() {
+                  StartTextAnimation(0);
+                }, 20000);
+             }
+             // check if dataText[i] exists
+            if (i < dataText[i].length) {
+              // text exists! start typewriter animation
+             typeWriter(dataText[i], 0, function(){
+               // after callback (and whole text has been animated), start next text
+               StartTextAnimation(i + 1);
+             });
+            }
+          }
+          // start the text animation
+          StartTextAnimation(0);
+        });
+
+      }
+    });
+  });
+
+</script>
+<!-- write your code here -->
+<style>
+       
+#frame1-typing{
+ margin-top: 116px;
+ margin-left:40px;
+ font-family: arial;
+
+  text-align: left;
+
+}
+
+
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+#creativeBg {
+    width: 300px;
+    height: 250px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+
+#bannerWrapper {
+    background:url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/bg.gif) no-repeat;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #666;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+.productImage1 {
+    background: url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/product1.png) no-repeat;
+    width:286px;
+    height: 258px;
+    left:-88px;
+	top:38px;
+    position: absolute;
+	z-index:1;
+	animation: productMoving 2.0s 1.0s both;
+	animation-direction: alternate;
+}
+.productImage2 {
+	background: url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/product2.png) no-repeat;
+    width:251px;
+    height: 253px;
+    left: -69px;
+    top: 39px;
+    position: absolute;
+	z-index:0;
+	animation: productMoving2 1.0s 3.5s both;
+}
+.copy {
+	background: url(https://creative.sebpo.com/accuweather/2020/AW_TShirt_Campaign/300x250/copy.png) no-repeat;
+    width:119px;
+    height:210px;
+    right:10px;
+    top: 28px;
+    position: absolute;
+}
+
+
+
+@keyframes productMoving {
+    0% {
+        transform: translateX(-180px);
+    }
+    10% {
+        transform: translateX(0px);
+    }
+	20% {
+        transform: translateX(-40px);
+    }
+	30% {
+        transform: translateX(0px);
+    }
+	40% {
+        transform: translateX(0px);
+    }
+	50% {
+        transform: translateX(0px);
+    }
+	60% {
+        transform: translateX(0px);
+    }
+	70% {
+        transform: translateX(0px);
+    }
+	80% {
+        transform: translateX(0px);
+    }
+	90% {
+        transform: translateX(0px);
+    }
+	100% {
+        transform: translateX(-180px);
+    }
+}
+@keyframes productMoving2 {
+    0% {
+        transform: translateX(-180px);
+    }
+	25% {
+        transform: translateX(0px);
+    }
+	50% {
+        transform: translateX(-40px);
+    }
+    75% {
+        transform: translateX(0px);
+    }
+	100% {
+        transform: translateX(0px);
+    }
+}
+
+
+  
+    </style>
+</head>
+<body onload="init();" style="margin:0px;">
+<a href="javascript:window.open(window.clickTag)">
+	<div id='creativeBg'>       
+    <div id='bannerWrapper'>
+      <div id='bannerContent'>              
+        <div class="productImage1"></div>
+        <div class="productImage2"></div>               
+
+
+        <div class='copy'></div>
+
+      </div>
+    </div>
+  </div>
+</a>
+</body>
+</html>

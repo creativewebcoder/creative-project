@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="ad.size" content="width=970,height=250">
+    <title>AW_Daily_970x250</title>
+      <script> window.frameElement.style.width = '100%';</script>
+
+    
+      <style>
+        body {
+            padding: 0;
+            margin: 0
+        }
+
+        #CLICK {
+            width: 100%;
+            height: 250px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .banner-item {
+            background: url(https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/bg_web.png) no-repeat;
+            max-width: 970px;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 1px solid #202020;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .innerWrapper{
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+            margin: 15px auto;
+        }
+        .imagePanels{
+            width: 70%;
+            float: left;
+            overflow: hidden;
+        }
+        .copyPanels{
+            width: 27%;
+            float: right;
+            padding: 0 2% 0 1%;
+        }
+
+        .copyPanels img.displayDesktop {
+            margin: 0 auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle; 
+        }
+
+        .imagePanels ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .imagePanels ul li {
+            list-style: none;
+            padding: 15px 1%;
+            width: 31%;
+            float: left;
+            overflow: hidden;
+           
+        }
+        .imagePanels ul li img {
+            margin: 0 auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle; 
+        }
+        /*.innerWrapper img {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle; 
+        }*/
+        .copyPanels .displayMobile{
+            display: none;
+        }
+        
+
+@media screen and (max-width: 969px) {
+    .innerWrapper {
+        margin: 1% auto;
+    }
+    .imagePanels ul li img{
+        width: 100%;
+    }
+    .copyPanels img.displayDesktop {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .innerWrapper {
+        margin: 4% auto;
+    }
+}
+@media screen and (max-width: 727px) {
+    .innerWrapper {
+        margin: 5% auto;
+    }
+}
+@media screen and (max-width: 640px) {
+    .innerWrapper {
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width:727px) {
+    
+   
+}
+@media screen and (max-width: 414px) {
+    .banner-item {
+        background: url(https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/bg_mobile_web.png) no-repeat;
+        max-width: 414px;
+    }
+    .innerWrapper {
+        margin: 1% auto;
+    }
+    .imagePanels ul li {
+        padding: 15px 1% 5px 1%;
+    }
+    .imagePanels, .copyPanels {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            float: unset;
+        }
+        .copyPanels {
+            margin: 5px auto 0px;
+        }
+        .copyPanels img.displayMobile {
+            margin: 0 auto;
+        }
+
+        .copyPanels img.displayMobile{
+            display: block;
+        }
+
+        .copyPanels img.displayDesktop{
+            display: none;
+        }
+}
+
+@media screen and (max-width:375px) {
+    .innerWrapper {
+        margin: 2% auto;
+    }
+  .innerWrapper .copyPanels {
+    margin: 12px auto 0px;
+    width: 90%;
+    padding: 0 5%;
+}
+    .copyPanels img.displayMobile {
+            width: 100%;
+     }
+}
+
+@media screen and (max-width:360px) {
+   .copyPanels {
+    margin: 35px auto 0px;
+}
+}
+@media screen and (max-width:320px) {
+   .copyPanels {
+    margin: 20px auto 0px;
+}
+  .imagePanels, .copyPanels {
+    margin: 20px auto 0px;
+}
+}
+@media screen and (max-width:300px) {
+    
+   
+}
+    </style>
+</head>
+
+<body>
+    <div class="banner-item">
+        <a href="%%CLICK_URL_UNESC%%https://www.google.com/" target="_blank" id="CLICK"></a>
+        <div class="innerWrapper">
+            <div class="imagePanels">
+                <ul>
+                    <li><img src="https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/product1.png" alt=""></li>
+                    <li>
+                        <img src="https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/product2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/product3.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="copyPanels">
+                <img src="https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/copy_desktop.png" class="displayDesktop" alt="">
+                <img src="https://vortex.accuweather.com/adc2010/ads/images/AW_TShirt/copy_mobile.png" class="displayMobile" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
